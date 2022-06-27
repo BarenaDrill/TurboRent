@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Car;
+use App\Models\Booking;
+use App\Models\Comment;
+use App\Models\Wishlist;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -40,4 +45,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function cars(){
+        return $this->hasMany(Car::class);
+    }
+
+    public function bookings(){
+        return $this->hasMany(Booking::class);
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
+    public function wishlist(){
+        return $this->hasOne(Wishlist::class);
+    }
 }
