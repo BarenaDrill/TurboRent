@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <title>Turbo Rent</title>
+    <link rel="icon" href="/img/iconTurbo.png" type = "image/x-icon">
   </head>
   <body style="background-color: #911f27">
 
