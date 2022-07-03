@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,11 @@ Route::get('/wishlist', function(){
 Route::get('/register', function(){
     return view('register');
 });
+
+Route::get('/host',function(){
+    return view('host');
+});
+
+Route::get('/host', [HostController::class, 'index']);
+
+

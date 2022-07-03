@@ -4,12 +4,13 @@
     Register
 @endsection
 
-@section('content')
-    <div class="text-center">
+@section('container')
+    {{-- kyknya g perlu yg ini de soalny di atas dh ada logo --}}
+    {{-- <div class="text-center">
         <img src="/img/logo.png" style="width:160px;">
-    </div>
-    <div class="container-fluid py-5 d-flex justify-content-center h-100 col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card card-body bg-dark text-white p-5" style="border-radius: 1rem;">
+    </div> --}}
+    <div class="container-fluid py-5 d-flex justify-content-center ">
+        <div class="card card-body text-black p-5" style="border-radius: 1rem; background: #FCF0C8;" >
             <form action="/register-process" method="post" class="mb-md-5 px-5">
                 @csrf
                 <h2 class="fw-bold mb-5 text-uppercase text-center">Register</h2>
@@ -65,12 +66,12 @@
                     <input type="password" name="cPassword" id="cPassword_field" class="form-control form px-5-control-lg">
                 </div>
 
-                <div class="d-flex flex-row justify-content-between align-items-end mt-5">
+                <div class="d-flex flex-row justify-content-evenly align-items-end mt-5">
                     <p class="mb-0">
-                        <a href="/login" class="text-white fw-bold">Already registered? Login here!</a>
+                        Already registered?
+                        <a href="/login" class="text-black fw-bold"> Login here!</a>
                     </p>
-
-                    <button class="btn btn-outline-light btn-lg px-3" type="submit">REGISTER</button>
+                    <button class="btn btn-outline-dark btn-lg px-3" type="submit">REGISTER</button>
                 </div>
             </form>
         </div>
