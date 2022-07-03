@@ -7,11 +7,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto gap-5">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px;">
-                <h4 style="color: #630a10;">
+            <a class="nav-link" aria-current="page" href="/">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
                   Home
                 </h4>
               </div>
@@ -19,8 +19,8 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px;">
-                <h4 style="color: #630a10;">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
                   Rent
                 </h4>
               </div>
@@ -28,18 +28,27 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px;">
-                <h4 style="color: #630a10;">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
                   Host
                 </h4>
               </div>
             </a>  
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px;">
-                <h4 style="color: #630a10;">
+          <a class="nav-link" aria-current="page" href="/account">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
                   Account
+                </h4>
+              </div>
+            </a>  
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
+                  Logout
                 </h4>
               </div>
             </a>  

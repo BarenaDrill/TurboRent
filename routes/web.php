@@ -17,10 +17,26 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/register', function(){
+    return view('register');
+});
+
+Route::get('/account', function(){
+    return view('account');
+});
+
 Route::get('/wishlist', function(){
     return view('wishlist');
 });
 
-Route::get('/register', function(){
-    return view('register');
+Route::get('/profile', function(){
+    return view('profile');
+});
+
+Route::get('/income', function(){
+    return view('income');
+});
+
+Route::get('/help', function(){
+    return view('help');
 });
