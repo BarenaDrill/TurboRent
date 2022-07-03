@@ -6,7 +6,7 @@
 
 @section('container')
    
-<div class="mt-5">
+<div class="mt-3">
    <a class="nav-link" aria-current="page" href="/addCar">
       <h3 style="color: #fbefc7;">
          + Add Car
@@ -33,7 +33,7 @@
                </h5>
             </p>
             <p class="card-text">
-               <h5 class="text-start">
+               <h5 class="text-center">
                   Rating
                </h5>
             </p>
@@ -59,7 +59,7 @@
                </h5>
             </p>
             <p class="card-text">
-               <h5 class="text-start">
+               <h5 class="text-center">
                   Rating
                </h5>
             </p>

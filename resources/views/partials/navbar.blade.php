@@ -28,7 +28,7 @@
             </a>  
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="">
+          <a class="nav-link" aria-current="page" href="host">
               <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
                   Host
@@ -47,7 +47,7 @@
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end"style="width: 10px;">
-            <li><a class="dropdown-item" href="#" ">Register</a></li>
+            <li><a class="dropdown-item" href="/register" ">Register</a></li>
           </ul>
         </div>
 
