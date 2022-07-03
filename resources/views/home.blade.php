@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    Home
+@endsection
+
 @section('container')
     <div id="carouselExampleCaptions" class="carousel slide mt-4" data-bs-ride="false">
         <div class="carousel-indicators">

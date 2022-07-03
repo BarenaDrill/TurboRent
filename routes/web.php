@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +41,19 @@ Route::get('/income', function(){
 Route::get('/help', function(){
     return view('help');
 });
+
+Route::get('/login', function(){
+    return view('login');
+});
+
+Route::get('/cardetails', function(){
+    return view('cardetails');
+});
+
+Route::get('/host',function(){
+    return view('host');
+});
+
+Route::get('/host', [HostController::class, 'index']);
+
+
