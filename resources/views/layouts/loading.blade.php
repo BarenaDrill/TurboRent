@@ -14,12 +14,11 @@
     {{-- My Styles.CSS --}}
     <link rel="stylesheet" href="/css/style.css">
 
-    <title>Turbo Rent | @yield('title')</title>
-    <link rel="icon" href="/img/iconTurbo.png" type = "image/x-icon">
+    <title>Turbo Rent</title>
   </head>
   <body style="background-color: #911f27">
 
-    @include('partials.navbar')
+    @include('partials.navbar2')
     
     {{-- body --}}
     <div class="container">

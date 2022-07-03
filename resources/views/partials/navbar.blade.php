@@ -6,11 +6,12 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">
-              <div class="btn align-self-center placeholder-glow" style="background-color: #fbefc7; width: 115px;">
+            <a class="nav-link" aria-current="page" href="/">
+              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
                   Home
                 </h4>
@@ -18,8 +19,8 @@
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="btn align-items-center" style="background-color: #fbefc7; width: 115px;">
+          <a class="nav-link" aria-current="page" href="">
+              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
                   Rent
                 </h4>
@@ -27,23 +28,29 @@
             </a>  
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="btn" style="background-color: #fbefc7; width: 115px;">
+          <a class="nav-link" aria-current="page" href="">
+              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
                   Host
                 </h4>
               </div>
             </a>  
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="btn" style="background-color: #fbefc7; width: 115px;">
-                <h4 style="color: #630a10;">
-                  Account
-                </h4>
-              </div>
-            </a>  
-        </li>
+
+        <div class="btn-group">
+          <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
+            <h4 style="color: #630a10;">
+              Account
+            </h4>
+          </button>
+          <button type="button" class="btn align-self-center dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #fbefc7; height: 50px;" >
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end"style="width: 10px;">
+            <li><a class="dropdown-item" href="#" ">Register</a></li>
+          </ul>
+        </div>
+
       </ul>
     </div>
   </div>
