@@ -82,10 +82,37 @@
                 </div>
             </div>
 
-            <div class="d-flex" style="justify-content: center; margin-top:20px">
-                <button type="button" class="btn" style="text-align: center; background-color:#911F27; color:#fcf0c8"><b>Book Now</b></button>
+            <div class="d-flex" style="justify-content: center; margin-top:20px;">
+                 <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#911F27; color:#fcf0c8">
+                        Book Now
+                    </button>
+  
+                <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="background-color:#911F27; color:#BBB396">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Booking</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="background-color:#BBB396; color:#911F27">
+                                    <div class="" style="">
+                                        <label for="exampleInputPassword1" class="form-label"><b>Pick Up date</b></label>
+                                        <input type="date" class="form-control" id="exampleInputDate" style="background-color:aliceblue">
+                                        <label for="exampleInputPassword1" class="form-label"><b>End date</b></label>
+                                        <input type="date" class="form-control" id="exampleInputDate" style="background-color:aliceblue">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn" style="background-color:#BBB396; color:#911F27"><b>Book</b></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-
+  
         </div>
         
         <div class="content" style="display: flex; flex-direction:column;">
