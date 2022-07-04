@@ -55,5 +55,6 @@ Route::get('/host',function(){
 });
 
 Route::get('/host', [HostController::class, 'index']);
+Route::get('/host/addCar', [HostController::class, 'add']);
 
 

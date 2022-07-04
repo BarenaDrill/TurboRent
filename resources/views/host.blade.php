@@ -7,7 +7,7 @@
 @section('container')
    
 <div class="mt-3">
-   <a class="nav-link" aria-current="page" href="/addCar">
+   <a class="nav-link" aria-current="page" href="/host/addCar">
       <h3 style="color: #fbefc7;">
          + Add Car
       </h3>
