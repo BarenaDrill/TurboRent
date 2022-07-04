@@ -55,7 +55,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Car Name</h5>
                         <p class="card-text">IDR 300.000</p>
-                        <a href="#" class="btn btn-dark">Detail</a>
+                        <a href="/cardetails" class="btn btn-dark">Detail</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Car Name</h5>
                         <p class="card-text">IDR 300.000</p>
-                        <a href="#" class="btn btn-dark">Detail</a>
+                        <a href="/cardetails" class="btn btn-dark">Detail</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Car Name</h5>
                         <p class="card-text">IDR 300.000</p>
-                        <a href="#" class="btn btn-dark">Detail</a>
+                        <a href="/cardetails" class="btn btn-dark">Detail</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Car Name</h5>
                         <p class="card-text">IDR 300.000</p>
-                        <a href="#" class="btn btn-dark">Detail</a>
+                        <a href="/cardetails" class="btn btn-dark">Detail</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Car Name</h5>
                         <p class="card-text">IDR 300.000</p>
-                        <a href="#" class="btn btn-dark">Detail</a>
+                        <a href="/cardetails" class="btn btn-dark">Detail</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Car Name</h5>
                         <p class="card-text">IDR 300.000</p>
-                        <a href="#" class="btn btn-dark">Detail</a>
+                        <a href="/cardetails" class="btn btn-dark">Detail</a>
                     </div>
                 </div>
             </div>

@@ -82,10 +82,13 @@
                 </div>
             </div>
 
-            <div class="d-flex" style="justify-content: center; margin-top:20px;">
+            <div class="d-flex gap-4" style="justify-content: center; margin-top:20px;">
                  <!-- Button trigger modal -->
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#911F27; color:#fcf0c8">
                         Book Now
+                    </button>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#911F27; color:#fcf0c8">
+                        Add to wishlist
                     </button>
   
                 <!-- Modal -->

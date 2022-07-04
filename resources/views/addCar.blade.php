@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    Add Car
+    Add Vehicle
 @endsection
 
 @section('container')
@@ -13,7 +13,7 @@
         <div class="card card-body text-black p-5" style="border-radius: 1rem; background: #FCF0C8;" >
             <form action="/addCar" method="post" class="mb-md-5 px-5" enctype="multipart/form-data">
                @csrf
-               <h2 class="fw-bold mb-5 text-uppercase text-center">Add car</h2>
+               <h2 class="fw-bold mb-5 text-uppercase text-center">Add Vehcile</h2>
 
                {{-- CAR NAME --}}
                <div class="form-floating">
@@ -167,7 +167,7 @@
 
 
                <div class="d-flex flex-row justify-content-evenly align-items-end mt-5">
-                  <button class="btn btn-outline-dark btn-lg px-3" type="submit">ADD GAME</button>
+                  <button class="btn btn-outline-dark btn-lg px-3" type="submit">ADD VEHICLE</button>
                </div>
 
             </form>

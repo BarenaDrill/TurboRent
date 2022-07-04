@@ -37,6 +37,7 @@
                   Rating
                </h5>
             </p>
+            <a href="/cardetails" class="float-end"><button type="button" class="btn btn-dark">Detail</button></a>
          </div>
       </div>
    </div>
@@ -63,6 +64,7 @@
                   Rating
                </h5>
             </p>
+            <a href="/cardetails" class="float-end"><button type="button" class="btn btn-dark">Detail</button></a>
          </div>
       </div>
    </div>
@@ -91,6 +93,7 @@
                   Rating
                </h5>
             </p>
+            <a href="/cardetails" class="float-end"><button type="button" class="btn btn-dark">Detail</button></a>
          </div>
       </div>
    </div>
