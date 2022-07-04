@@ -67,5 +67,36 @@
       </div>
    </div>
 </div>
+<div class="row my-5 ">
+   <div class="col-sm-6">
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title ">
+               <span class="align-middle" style="height: 25px; width: 25px; background-color: #CC2727; border-radius: 50%; display: inline-block;"></span>
+               <span class="align-middle"> Booked</span>
+            </h5>
+            <img src="https://www.toyota.astra.co.id/sites/default/files/2021-11/4-avanza-silver-mica-metallic.png" class="d-block w-100" alt="..." style="height: 360px;">
+            <p class="card-text">
+               <h5 class="text-center">
+                  Car Name
+               </h5>
+            </p>
+            <p class="card-text">
+               <h5 class="text-center">
+                  Price
+               </h5>
+            </p>
+            <p class="card-text">
+               <h5 class="text-center">
+                  Rating
+               </h5>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="col-sm-6">
+   </div>
+
+</div>
 
 @endsection

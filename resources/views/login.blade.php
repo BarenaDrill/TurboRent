@@ -1,4 +1,4 @@
-@extends('layouts.loading')
+@extends('layouts.main')
 
 @section('container')
 
@@ -8,12 +8,12 @@
         <form>
             <div class="mb-3" style="margin-top: 30px;">
                 <label for="exampleInputEmail1" class="form-label"><b>Email address</b></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="background-color: #FACE7F; margin-left:50px; margin-right: 50px; width:465px;">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="background-color:aliceblue; margin-left:50px; margin-right: 50px; width:465px;">
             </div>
         
             <div class="mb-3" style="margin-top:40px; ">
                 <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" style="background-color: #FACE7F; margin-left:50px; margin-right: 50px; width:465px;">
+                <input type="password" class="form-control" id="exampleInputPassword1" style="background-color:aliceblue; margin-left:50px; margin-right: 50px; width:465px;">
             </div>
 
             <div class="signupforgotpassword d-flex" style="justify-content:space-between; flex-direction:row; margin-left:50px; margin-right: 50px; margin-top:30px;">

@@ -8,6 +8,10 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 119cb73fb53d705b95eb40541e2223362c2e6d3c
       <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">
@@ -28,7 +32,11 @@
             </a>  
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link" aria-current="page" href="host">
+=======
+          <a class="nav-link" aria-current="page" href="/host">
+>>>>>>> 119cb73fb53d705b95eb40541e2223362c2e6d3c
               <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
                   Host
@@ -36,6 +44,7 @@
               </div>
             </a>  
         </li>
+<<<<<<< HEAD
 
         <div class="btn-group">
           <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
@@ -53,6 +62,38 @@
           </ul>
         </div>
 
+=======
+        
+      
+        <div class="btn-group">
+          <a class="nav-link" aria-current="page" href="/account">
+            <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
+              <h4 style="color: #630a10;">
+                Account
+              </h4>
+            </button>
+          </a>
+          
+          <button type="button" class="btn align-self-center dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #fbefc7; height: 50px;" >
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end"style="width: 10px;">
+            <li><a class="dropdown-item" href="/register" ">Register</a></li>
+            <li><a class="dropdown-item" href="/register" ">Logout</a></li>
+          </ul>
+        </div>
+
+        {{-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
+                  Logout
+                </h4>
+              </div>
+            </a>  
+        </li> --}}
+
+>>>>>>> 119cb73fb53d705b95eb40541e2223362c2e6d3c
       </ul>
     </div>
   </div>
