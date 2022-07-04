@@ -8,75 +8,37 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-<<<<<<< HEAD
-      <ul class="navbar-nav ms-auto gap-5">
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">
-              <div class="align-self-center">
-                <h4 style="color: #fbefc7;">
-=======
+      
       <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">
               <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
->>>>>>> 65901f4fd44d585d593176f55675b123d4b57be0
                   Home
                 </h4>
               </div>
             </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="align-self-center">
-                <h4 style="color: #fbefc7;">
-=======
           <a class="nav-link" aria-current="page" href="">
               <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
->>>>>>> 65901f4fd44d585d593176f55675b123d4b57be0
                   Rent
                 </h4>
               </div>
             </a>  
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="align-self-center">
-                <h4 style="color: #fbefc7;">
-=======
           <a class="nav-link" aria-current="page" href="host">
               <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
->>>>>>> 65901f4fd44d585d593176f55675b123d4b57be0
                   Host
                 </h4>
               </div>
             </a>  
         </li>
-<<<<<<< HEAD
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/account">
-              <div class="align-self-center">
-                <h4 style="color: #fbefc7;">
-                  Account
-                </h4>
-              </div>
-            </a>  
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="align-self-center">
-                <h4 style="color: #fbefc7;">
-                  Logout
-                </h4>
-              </div>
-            </a>  
-        </li>
-=======
-
+        
+      
         <div class="btn-group">
           <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
             <h4 style="color: #630a10;">
@@ -88,10 +50,20 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end"style="width: 10px;">
             <li><a class="dropdown-item" href="/register" ">Register</a></li>
+            <li><a class="dropdown-item" href="/register" ">Logout</a></li>
           </ul>
         </div>
 
->>>>>>> 65901f4fd44d585d593176f55675b123d4b57be0
+        {{-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+              <div class="align-self-center">
+                <h4 style="color: #fbefc7;">
+                  Logout
+                </h4>
+              </div>
+            </a>  
+        </li> --}}
+
       </ul>
     </div>
   </div>

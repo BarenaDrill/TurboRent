@@ -69,31 +69,105 @@
 
                {{-- DESCRIPTION ROW 1--}}
                <div class="d-flex flex-row justify-content-between">
-                  <div class="form-group col-md-3">
-                     <label for="carType">City</label>
-                     <input type="text" class="form-control" id="inputCity">
-                  </div>
 
                   <div class="form-group col-md-3">
-                     <label for="inputState">State</label>
+                     <label for="inputState">Car Type</label>
                      <select id="inputState" class="form-control">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <option>Manual</option>
+                        <option>Automatic</option>
                      </select>
                   </div>
 
                   <div class="form-group col-md-3">
-                     <label for="inputZip">Zip</label>
-                     <input type="text" class="form-control" id="inputZip">
+                     <label for="inputState">Fuel Type</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Petrol</option>
+                        <option>Electric</option>
+                     </select>
                   </div>
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">Seat</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>2 Seater</option>
+                        <option>4 Seater</option>
+                        <option>6 Seater</option>
+                     </select>
+                  </div>
+
                </div>
 
+               {{-- DESCRIPTION ROW 2--}}
+               <div class="d-flex flex-row justify-content-between mt-2">
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">Wheel Model</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Front-Wheel Drive</option>
+                        <option>Rear-Wheel Drive</option>
+                        <option>Four-Wheel Drive</option>
+                     </select>
+                  </div>
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">Bluetooth</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Available</option>
+                        <option>Not Available</option>
+                     </select>
+                  </div>
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">Aux</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Available</option>
+                        <option>Not Available</option>
+                     </select>
+                  </div>
+
+               </div>
+
+               {{-- DESCRIPTION ROW 3--}}
+               <div class="d-flex flex-row justify-content-between mt-2">
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">Child Seat</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Available</option>
+                        <option>Not Available</option>
+                     </select>
+                  </div>
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">Pet Friendly</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Available</option>
+                        <option>Not Available</option>
+                     </select>
+                  </div>
+
+                  <div class="form-group col-md-3">
+                     <label for="inputState">No Smoking</label>
+                     <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Available</option>
+                        <option>Not Available</option>
+                     </select>
+                  </div>
+
+               </div>
+
+
                <div class="d-flex flex-row justify-content-evenly align-items-end mt-5">
-                  <p class="mb-0">
-                     Already registered?
-                     <a href="/login" class="text-black fw-bold"> Login here!</a>
-                  </p>
-                  <button class="btn btn-outline-dark btn-lg px-3" type="submit">REGISTER</button>
+                  <button class="btn btn-outline-dark btn-lg px-3" type="submit">ADD GAME</button>
                </div>
 
             </form>
