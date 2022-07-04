@@ -54,6 +54,10 @@ Route::get('/host',function(){
     return view('host');
 });
 
+Route::get('/rentFeeds', function(){
+    return view('rentFeeds');
+});
+
 Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
 

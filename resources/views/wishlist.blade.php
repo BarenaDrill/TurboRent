@@ -10,7 +10,7 @@
                 <img src="https://akcdn.detik.net.id/visual/2019/02/28/a02dae3a-28ca-49ce-8596-2f165188872f_169.jpeg?w=650" style="height: 95px;" class="img-fluid rounded mt-1" alt="...">
                 <div class="m-3">
                     <h5 class="card-title fs-4" style="color: #630a10;"><strong>Car Name</strong></h5>
-                    <a href="#" class="text-decoration-none">
+                    <a href="/cardetails" class="text-decoration-none">
                         <p class="card-text text-primary"><small>Detail</small></p>
                     </a>
                 </div>
