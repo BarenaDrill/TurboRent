@@ -29,7 +29,7 @@
             </a>  
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="host">
+          <a class="nav-link" aria-current="page" href="/host">
               <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
                 <h4 style="color: #630a10;">
                   Host
@@ -40,11 +40,14 @@
         
       
         <div class="btn-group">
-          <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
-            <h4 style="color: #630a10;">
-              Account
-            </h4>
-          </button>
+          <a class="nav-link" aria-current="page" href="/account">
+            <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
+              <h4 style="color: #630a10;">
+                Account
+              </h4>
+            </button>
+          </a>
+          
           <button type="button" class="btn align-self-center dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #fbefc7; height: 50px;" >
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
