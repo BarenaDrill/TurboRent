@@ -50,10 +50,6 @@ Route::get('/cardetails', function(){
     return view('cardetails');
 });
 
-Route::get('/host',function(){
-    return view('host');
-});
-
 Route::get('/rentFeeds', function(){
     return view('rentFeeds');
 });
@@ -71,5 +67,6 @@ Route::get('/host/addCar', [HostController::class, 'add']);
 Route::get('/dashboard', function(){
     return view('dashboard.index');
 });
+
 
 
