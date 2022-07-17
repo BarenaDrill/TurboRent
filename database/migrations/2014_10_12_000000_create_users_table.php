@@ -27,12 +27,12 @@ class CreateUsersTable extends Migration
             $table->integer('carQuantity');
             $table->integer('income');
 
-            $table->foreignId('wishlistID');
+            // $table->foreignId('wishlistID');
             
             $table->string('accountNumber');
             $table->string('proofImage');
 
-            $table->foreignId('commentID');
+            // $table->foreignId('commentID');
 
             $table->string('password');
             $table->timestamps();

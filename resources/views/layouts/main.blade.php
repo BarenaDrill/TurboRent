@@ -17,7 +17,7 @@
     <title>Turbo Rent | @yield('title')</title>
     <link rel="icon" href="/img/iconTurbo.png" type = "image/x-icon">
   </head>
-  <body style="background-color: #911f27">
+  <body>
 
     @include('partials.navbar')
     

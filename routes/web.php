@@ -58,7 +58,18 @@ Route::get('/rentFeeds', function(){
     return view('rentFeeds');
 });
 
+Route::get('/orders', function(){
+    return view('orders');
+});
+Route::get('/completed', function(){
+    return view('completed');
+});
+
 Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
+
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
+});
 
 

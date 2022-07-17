@@ -20,9 +20,11 @@ class CreateBookingsTable extends Migration
             // ID ORANG YANG MINJAM , nama customer
             $table->foreignId('userID');
             $table->foreignId('carID'); 
+            $table->integer('status'); //0 / 1
             // -> yang pnya mobil idnya di car
             $table->integer('total');
-
+            $table->date('pickup');
+            $table->date('end');
             $table->timestamps();
         });
     }

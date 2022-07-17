@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.blank')
 
 @section('title')
     Register
@@ -10,7 +10,7 @@
         <img src="/img/logo.png" style="width:160px;">
     </div> --}}
     <div class="container-fluid py-5 d-flex justify-content-center ">
-        <div class="card card-body text-black p-5" style="border-radius: 1rem; background: #FCF0C8;" >
+        <div class="card card-body text-black p-5" style="border-radius: 1rem; background: #c2ded1;" >
             <form action="/register-process" method="post" class="mb-md-5 px-5">
                 @csrf
                 <h2 class="fw-bold mb-5 text-uppercase text-center">Register</h2>
