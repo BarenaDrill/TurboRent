@@ -61,12 +61,9 @@ Route::get('/completed', function(){
     return view('completed');
 });
 
-Route::get('/host', [HostController::class, 'index']);
-Route::get('/host/addCar', [HostController::class, 'add']);
-
-Route::get('/dashboard', function(){
-    return view('dashboard.index');
-});
-
+Route::get('/dashboard', [HostController::class, 'index']);
+Route::get('/dashboard/carManager', [HostController::class, 'index']);
+Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
+Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
 
 
