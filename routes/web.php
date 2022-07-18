@@ -30,9 +30,7 @@ Route::get('/wishlist', function(){
     return view('wishlist');
 });
 
-Route::get('/profile', function(){
-    return view('profile');
-});
+
 
 Route::get('/income', function(){
     return view('income');
@@ -66,4 +64,6 @@ Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
 
-
+Route::get('/profile', function(){
+    return view('profile');
+});

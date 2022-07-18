@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class HostController extends Controller
 {
     public function index(){
-        return view('dashboard.index');
+        return view('dashboard.index',[
+            'vehicles' => Car::all()->sortByDesc('status')
+        ]);
+
     }
 
     public function add(){
