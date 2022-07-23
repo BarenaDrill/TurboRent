@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HostController;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,7 +46,9 @@ Route::get('/login', function(){
 });
 
 Route::get('/cardetails', function(){
-    return view('cardetails');
+    return view('cardetails',[
+        'comments' => Comment::all() 
+    ]);
 });
 
 Route::get('/rentFeeds', function(){
