@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HostController;
-use App\Models\Comment;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,8 +31,6 @@ Route::get('/wishlist', function(){
     return view('wishlist');
 });
 
-
-
 Route::get('/income', function(){
     return view('income');
 });
@@ -43,12 +41,6 @@ Route::get('/help', function(){
 
 Route::get('/login', function(){
     return view('login');
-});
-
-Route::get('/cardetails', function(){
-    return view('cardetails',[
-        'comments' => Comment::all() 
-    ]);
 });
 
 Route::get('/rentFeeds', function(){
@@ -66,6 +58,7 @@ Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
+Route::get('/cardetails',[UserController::class,'detail']);
 
 Route::get('/profile', function(){
     return view('profile');

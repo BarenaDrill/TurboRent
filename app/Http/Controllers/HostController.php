@@ -69,7 +69,7 @@ class HostController extends Controller
         ]);
 
         return redirect('/dashboard/carManager')->with('success', 'Game Added Successfully!');
-        
+
     }
 
     public function edit($id){
