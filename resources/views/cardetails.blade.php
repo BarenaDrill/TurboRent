@@ -162,10 +162,9 @@
                     <h4 style="margin-top:5px; margin-left: 40px;"><b>Price : </h4>
                 </div>
                 <div class="flex-column">
-                    <h5 style="margin-top:9px;color:#354259; margin-left: 10px;"> {{ $car->price }} </b> per day</h5>
+                    <h5 style="margin-top:9px;color:#354259; margin-left: 10px;"> {{ number_format($car->price) }} </b> per day</h5>
                 </div>
             </div>
-            number_format($car->price)
 
             {{-- @endforeach --}}
 
@@ -177,7 +176,7 @@
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Book Now</b>
                     </button>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#c2ded1; color:#354259">
+                    <button type="button" class="btn" href="/wishlist" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Add to wishlist</b>
                     </button>
 
