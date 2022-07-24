@@ -1,7 +1,8 @@
 @extends('dashboard.main')
 
 @section('container')
-   <div class="d-flex mt-3 align-items-center justify-content-between">
+
+   <div class="d-flex mt-3 align-items-center justify-content-between mb-3">
       <h2>My Vehicles</h2>
       <a class="nav-link" aria-current="page" href="/dashboard/carManager/addVehicle">
          <h5>
@@ -12,46 +13,89 @@
 
    @foreach ($vehicles as $vehicle)
 
-      <div class="card mt-3 ">
+      <div class="card mb-3 h-100 ">
          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center h-100" >
-               <img src="/storage/public/carImage/{{ $vehicle->carImage }}" alt="..." class="img-fluid rounded-start">
-            </div>
             <div class="col-md-8">
                <div class="card-body">
                   @if ($vehicle->status === 0)
                      <h5 class="card-title">
-                        <span class="align-middle" style="height: 25px; width: 25px; background-color: #CC2727; border-radius: 50%; display: inline-block;"></span>
+                        <span class="align-middle me-2" style="height: 25px; width: 25px; background-color: #CC2727; border-radius: 50%; display: inline-block;"></span>
                         <span class="align-middle">Booked</span>
                      </h5>
                   @else
                      <h5 class="card-title ">
-                        <span class="align-middle" style="height: 25px; width: 25px; background-color: #2ACC27; border-radius: 50%; display: inline-block;"></span>
+                        <span class="align-middle me-2" style="height: 25px; width: 25px; background-color: #2ACC27; border-radius: 50%; display: inline-block;"></span>
                         <span class="align-middle">Available</span>
                      </h5>
                   @endif
                   
                   <p class="card-text ms-2">
-                     <h4 class="m-0">
+
+                     <h4 class="mb-1 d-flex align-item-center">
                         {{ $vehicle->carName }}
-                        <a href="/cardetails" class="float-end">
-                           <button type="button" class="btn btn-dark me-3">
-                              <small>DETAIL</small>
-                           </button>
+                        <a href="/cardetails" class="float-start">
+                           <img class="ms-2" src="https://img.icons8.com/material-outlined/384/000000/edit--v1.png" style="width: 20px ; height: 20px ; "/>
                         </a>
                      </h4>
-                     <h5>
-                        IDR {{ $vehicle->price }}<br>
-                        {{ $vehicle->totalRating }}
-                     </h5>
+                     <h6 class="mb-2">
+                        IDR {{ number_format($vehicle->price) }} <br>
+                     </h6>
+
+                     @if ( $vehicle->totalRating == 0 )
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                     @elseif( $vehicle->totalRating == 1 )
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                     @elseif( $vehicle->totalRating == 2 )
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                     @elseif( $vehicle->totalRating == 3 )
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                     @elseif( $vehicle->totalRating == 4 )
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" style="height: 18px"/>
+                     @elseif( $vehicle->totalRating == 5 )
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="height: 20px"/>
+                     @endif
+             
                   </p>
 
-                  <p class="card-text m-0"><small class="text-muted">Last updated 3 mins ago</small></p>
-
-                  
+                  <div class="mb-4">
+                     <a href="/cardetails" class="float-start">
+                        <button type="button" class="btn btn-danger me-3 mb-4">
+                           <small>DELETE</small>
+                        </button>
+                     </a>
+                  </div>
 
                </div>
             </div>
+
+            <div class="col-md-4 d-flex align-items-center " >
+               <img src="/storage/carImage/{{ $vehicle->carImage }}" alt="..." class="img-fluid rounded-end">
+            </div>
+         
          </div>
       </div>
 

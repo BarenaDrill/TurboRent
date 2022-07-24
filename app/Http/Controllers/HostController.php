@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
@@ -21,7 +22,7 @@ class HostController extends Controller
     }
 
     public function store(Request $request){
-        $validateData = $request->validate([
+        $request->validate([
             'carName' => 'required' , 
             'plateNumber' => 'required', 
             'price' => 'required' , 
@@ -38,26 +39,51 @@ class HostController extends Controller
             'aux' => 'required' , 
             'childSeat' => 'required' , 
             'petFriendly' => 'required' , 
-            'noSmoking' => 'required' , 
-            'carImage' => 'required' 
+            'noSmoking' => 'required' ,  
+        ]);
+       
+        $fileName = $request->carName.'.'.$request->carImage->extension();
+
+        $request->file('carImage')->storeAs(
+            'public/carImage', $fileName
+        );
+        
+        Car::create([
+            'carName' => $request->carName,
+            'plateNumber' => $request->plateNumber,
+            'price' => $request->price,
+            'carImage' => $fileName,
+            'userID' => 1,
+            'carAddress' => $request->carAddress,
+            'status' => $request->status,
+            'totalRating' => $request->totalRating,
+            'carType' => $request->carType,
+            'fuelType' => $request->fuelType,
+            'seat' => $request->seat,
+            'wheelModel' => $request->wheelModel,
+            'bluetooth' => $request->bluetooth,
+            'aux' => $request->aux,
+            'childSeat' => $request->childSeat,
+            'petFriendly' => $request->petFriendly,
+            'noSmoking' => $request->noSmoking,    
         ]);
 
-        $file = $request->file('carImage');
-        $extension = $file->getClientOriginalExtension();
-
-        $file->storeAs('carImage',$file->getClientOriginalName()); 
-
-        
-        // dd($request->all());
-        $validateData['carImage'] = $file->getClientOriginalName();
-
-
-        $validateData['userID'] = '1' ;
-
-        // dd($validateData['carImage']);
-        
-        Car::create($validateData);
         return redirect('/dashboard/carManager')->with('success', 'Game Added Successfully!');
+        
+    }
+
+    public function edit($id){
+        $vehicle = Car::select('*')->find($id);
+        return view('updateVehicle',[
+            'title' => 'Update Vehicle' , 
+            'active' => 'Admin' , 
+            'vehicle' => $vehicle 
+        ]);        
+    }
+
+    public function destory($id){
+        DB::delete('delete from cars where id = ?',[$id]);
+        return redirect('/manageGame')->with('success', 'Game Deleted Successfully!');
         
     }
 
