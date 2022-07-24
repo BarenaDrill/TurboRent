@@ -22,32 +22,32 @@ class HostController extends Controller
 
     public function store(Request $request){
         $validateData = $request->validate([
-            'carName' => 'required' , 
-            'plateNumber' => 'required', 
-            'price' => 'required' , 
-            'carImage' => 'required|mimes:png,jpg,jpeg,svg' , 
+            'carName' => 'required' ,
+            'plateNumber' => 'required',
+            'price' => 'required' ,
+            'carImage' => 'required|mimes:png,jpg,jpeg,svg' ,
             // userID
-            'carAddress' => 'required' , 
-            'status' => 'required' , 
-            'totalRating' => 'required' , 
-            'carType' => 'required' , 
-            'fuelType' => 'required' , 
-            'seat' => 'required' , 
-            'wheelModel' => 'required' , 
-            'bluetooth' => 'required' , 
-            'aux' => 'required' , 
-            'childSeat' => 'required' , 
-            'petFriendly' => 'required' , 
-            'noSmoking' => 'required' , 
-            'carImage' => 'required' 
+            'carAddress' => 'required' ,
+            'status' => 'required' ,
+            'totalRating' => 'required' ,
+            'carType' => 'required' ,
+            'fuelType' => 'required' ,
+            'seat' => 'required' ,
+            'wheelModel' => 'required' ,
+            'bluetooth' => 'required' ,
+            'aux' => 'required' ,
+            'childSeat' => 'required' ,
+            'petFriendly' => 'required' ,
+            'noSmoking' => 'required' ,
+            'carImage' => 'required'
         ]);
 
         $file = $request->file('carImage');
         $extension = $file->getClientOriginalExtension();
 
-        $file->storeAs('carImage',$file->getClientOriginalName()); 
+        $file->storeAs('carImage',$file->getClientOriginalName());
 
-        
+
         // dd($request->all());
         $validateData['carImage'] = $file->getClientOriginalName();
 
@@ -55,10 +55,10 @@ class HostController extends Controller
         $validateData['userID'] = '1' ;
 
         // dd($validateData['carImage']);
-        
+
         Car::create($validateData);
         return redirect('/dashboard/carManager')->with('success', 'Game Added Successfully!');
-        
+
     }
 
 }
