@@ -1,73 +1,98 @@
 @extends('layouts.main')
 
-@section('container')
-    <div class="text-center m-4">
-        <img class="rounded-circle z-depth-2 shadow" width="100" src="https://avatars.githubusercontent.com/u/1071625?v=4" data-holder-rendered="true">
-        <h5 class="mt-2 fs-4" style="color:#fcf0c8"><strong>MY NAME</h5>
-    </div>   
+@section('title')
+    Profile
+@endsection
 
-    <div class="d-flex justify-content-center">
-        <div class="rounded shadow" style="width:700px; background-color: #fcf0c8">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">NAME</h5>
-                        <p class="card-text"><small class="text-muted">My Name</small></p>
+@section('container')
+
+    
+    @if(session()->has('success'))
+      <div class="alert alert-success col-lg-3 mt-2" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    @endif
+    <h2 class="card-title m-3 mt-3 mb-4" style="color: #354259;">Profile</h2>
+    <form action="/profile/{{ auth()->user()->id }}" method="post">
+        @csrf
+        <div class="mt-4 m-3">
+            <img class="rounded z-depth-2 shadow mt-2" width="200px" src="{{ asset('storage/' . auth()->user()->profile) }}">
+            <div class="d-flex justify-content-between">
+                <div style="width:500px;">
+                    <div class="form-floating">
+                        <p class="mb-0 mt-2" style="color: #354259;"><b>Name</b></p>
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control rounded @error('name') is-invalid @enderror" id="name" required value="{{ auth()->user()->name }}">
+                        </div>
+                        @error('name')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
-                </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Edit</button>
-                    </form>   
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">ADDRESS</h5>
-                        <p class="card-text"><small class="text-muted">My Address</small></p>
+                    <div class="form-floating">
+                        <p class="mb-0 mt-2" style="color: #354259;"><b>Email</b></p>
+                        <div class="mb-3">
+                            <input type="text" name="email" class="form-control rounded @error('email') is-invalid @enderror" id="email" required value="{{ auth()->user()->email }}">
+                        </div>
+                        @error('email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
-                </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Edit</button>
-                    </form>   
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">EMAIL</h5>
-                        <p class="card-text"><small class="text-muted">My Email</small></p>
+                    <div class="form-floating">
+                        <p class="mb-0 mt-2" style="color: #354259;"><b>Address</b></p>
+                        <div class="mb-3">
+                            <input type="text" name="address" class="form-control rounded @error('address') is-invalid @enderror" id="address" required value="{{ auth()->user()->address }}">
+                        </div>
+                        @error('address')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
-                </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Edit</button>
-                    </form>   
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">PASSWORD</h5>
-                        <p class="card-text"><small class="text-muted">********</small></p>
+                    <div class="form-floating">
+                        <p class="mb-0 mt-2" style="color: #354259;"><b>Phone Number</b></p>
+                        <div class="mb-3">
+                            <input type="text" name="phone" class="form-control rounded @error('phone') is-invalid @enderror" id="phone" required value="{{ auth()->user()->phone }}">
+                        </div>
+                        @error('phone')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
-                </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Change</button>
-                    </form>   
-                </div>
+                </div>    
+                <div style="width:500px;">
+                    <div class="form-floating">
+                        <p class="mb-0 mt-2" style="color: #354259;"><b>Password</b></p>
+                        <div class="mb-3">
+                            <input type="password" name="password" class="form-control rounded @error('password') is-invalid @enderror" id="password" required value="{{ auth()->user()->password }}">
+                        </div>
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <h4 class="mt-2">KTP</h4>
+                    <div>
+                        <a href="/storage/{{ auth()->user()->ktp }}">
+                            <img src="{{ asset('storage/' . auth()->user()->ktp) }}" style="width:200px;">
+                        </a>
+                    </div>
+                    <br>
+                    <br>
+                    {{-- <br> --}}
+                    <div class="mt-1">
+                        {{-- <a href="#" class="text-decoration-none p-2 px-5 text-white rounded" style="background-color: #354259;">UPDATE</a> --}}
+                        <button type="submit" class="p-1 px-5 text-white rounded" style="background-color: #354259;">UPDATE</button>
+                    </div>
+                </div>    
             </div>
+
         </div>
-    </div>    
+    </form>    
 @endsection

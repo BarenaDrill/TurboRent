@@ -1,8 +1,17 @@
 @extends('dashboard.main')
 
 @section('container')
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div class="mt-3">
+        <h2>MY CAR</h2>
+    </div>
+=======
+   <div class="d-flex mt-3 align-items-center justify-content-between">
+=======
 
    <div class="d-flex mt-3 align-items-center justify-content-between mb-3">
+>>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
       <h2>My Vehicles</h2>
       <a class="nav-link" aria-current="page" href="/dashboard/carManager/addVehicle">
          <h5>
@@ -98,4 +107,5 @@
 
    @endforeach
 
+>>>>>>> fcabf9e2e4f6479d9998fc06d553fa34a03ba434
 @endsection

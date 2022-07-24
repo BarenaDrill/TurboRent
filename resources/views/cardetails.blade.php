@@ -222,7 +222,7 @@
                     <div class="col-sm-6">
                         <div class="card" style="background-color: #c2ded1">
                             <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                                @foreach ($comments as $comment)
+                                {{-- @foreach ($comments as $comment)
                                 <div class="carousel-inner">
                                     @foreach ($users as $user)
                                         @if ($user->id == $comment->userID)
@@ -237,7 +237,7 @@
                                         @endif
                                     @endforeach
                                 </div>
-                                @endforeach
+                                @endforeach --}}
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>

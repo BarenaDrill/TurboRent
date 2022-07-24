@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\HostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
+use App\Models\Car;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +20,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+        'vehicles' => Car::all()
+    ]);
 });
 
-Route::get('/register', function(){
-    return view('register');
-});
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/account', function(){
     return view('account');
@@ -39,27 +48,34 @@ Route::get('/help', function(){
     return view('help');
 });
 
-Route::get('/login', function(){
-    return view('login');
+Route::get('/rentFeeds', function(){
+    return view('rentFeeds',[
+        'vehicles' => Car::all() 
+    ]);
 });
 
-Route::get('/rentFeeds', function(){
-    return view('rentFeeds');
+
+Route::get('/profile', function(){
+    return view('profile');
 });
 
 Route::get('/orders', function(){
     return view('orders');
 });
+
 Route::get('/completed', function(){
     return view('completed');
 });
 
-Route::get('/cardetails', [UserController::class, 'detail']);
+Route::get('/admin', function(){
+    return view('admin');
+});
 
 Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
+Route::get('/cardetails/{id}',[UserController::class,'detail']);
 
 // update 
 Route::get('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'edit']);
@@ -72,3 +88,9 @@ Route::get('/dashboard/carManager/deleteVehicle/{id}',[HostController::class, 'd
 Route::get('/profile', function(){
     return view('profile');
 });
+
+
+Route::get('/host', [HostController::class, 'index']);
+Route::get('/host/addCar', [HostController::class, 'add']);
+
+Route::post('/profile/{id}',[ProfileController::class, 'update']);
