@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-<<<<<<< HEAD
-=======
     
 
->>>>>>> fcabf9e2e4f6479d9998fc06d553fa34a03ba434
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -17,8 +14,6 @@
     
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
       
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
@@ -32,7 +27,6 @@
 
     @yield('styleManual')
 
->>>>>>> fcabf9e2e4f6479d9998fc06d553fa34a03ba434
   </head>
   
   <body>  
@@ -46,11 +40,7 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column mt-4">
                         <li class="nav-item">
-<<<<<<< HEAD
-                            <a class="nav-link active" aria-current="page" href="/">
-=======
                             <a class="nav-link active" aria-current="page" href="/dashboard/carManager">
->>>>>>> fcabf9e2e4f6479d9998fc06d553fa34a03ba434
                                 <span class="align-text-bottom"></span>
                                 <h5>Car Manager</h5>
                             </a>
@@ -73,7 +63,6 @@
     </div>
 
     
-<<<<<<< HEAD
     
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
@@ -81,10 +70,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
 
     <script src="/js/dashboard.js"></script>
-=======
+    
     @yield('scriptManual')
 
     
->>>>>>> fcabf9e2e4f6479d9998fc06d553fa34a03ba434
   </body>
 </html>
