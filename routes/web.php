@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Car;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+        'vehicles' => Car::all()
+    ]);
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
@@ -65,10 +68,10 @@ Route::get('/completed', function(){
     return view('completed');
 });
 
-<<<<<<< HEAD
 Route::get('/admin', function(){
     return view('admin');
-=======
+});
+
 Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
@@ -85,7 +88,6 @@ Route::get('/dashboard/carManager/deleteVehicle/{id}',[HostController::class, 'd
 
 Route::get('/profile', function(){
     return view('profile');
->>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
 });
 
 
