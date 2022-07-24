@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
@@ -76,6 +77,8 @@ Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
 Route::get('/cardetails/{id}',[UserController::class,'detail']);
+
+Route::post('/cardetails/{id}',[BookingController::class, 'store']);
 
 // update 
 Route::get('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'edit']);

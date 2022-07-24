@@ -165,6 +165,7 @@
                     <h5 style="margin-top:9px;color:#354259; margin-left: 10px;"> {{ $car->price }} </b> per day</h5>
                 </div>
             </div>
+            number_format($car->price)
 
             {{-- @endforeach --}}
 
@@ -181,6 +182,8 @@
                     </button>
 
                 <!-- Modal -->
+                <form method="post" action="{{ url('cardetails',$car->id) }}">
+                    @csrf
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content" style="background-color:#c2ded1; color:#354259">
@@ -191,17 +194,21 @@
                                 <div class="modal-body" style="background-color:white; color:#354259">
                                     <div class="" style="">
                                         <label for="exampleInputPassword1" class="form-label"><b>Pick Up date</b></label>
-                                        <input type="date" class="form-control" id="exampleInputDate" style="background-color:aliceblue">
-                                        <label for="exampleInputPassword1" class="form-label"><b>End date</b></label>
-                                        <input type="date" class="form-control" id="exampleInputDate" style="background-color:aliceblue">
+                                        <input type="date" class="form-control" id="exampleInputDate"  name="pickupdate"style="background-color:aliceblue">
+                                        <label for="exampleInputPassword1" class="form-label" ><b>End date</b></label>
+                                        <input type="date" class="form-control" id="exampleInputDate"  name="enddate"style="background-color:aliceblue">
                                     </div>
                                 </div>
                                 <div class="modal-footer" style="background-color:white;">
-                                    <button type="button" class="btn" style="background-color:#c2ded1; color:#354259;"><b>Book</b></button>
+                                   
+                                        
+                                        <button type="submit" class="btn" style="background-color:#c2ded1; color:#354259;"><b>Book</b></button>
+            
                                 </div>
                             </div>
                         </div>
                     </div>
+                </form>
             </div>
 
         </div>
