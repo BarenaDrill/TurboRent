@@ -60,6 +60,14 @@ Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
 Route::get('/cardetails',[UserController::class,'detail']);
 
+// update 
+Route::get('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'edit']);
+Route::put('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'update']);
+
+// delete 
+Route::get('/dashboard/carManager/deleteVehicle/{id}',[HostController::class, 'destroy']);
+
+
 Route::get('/profile', function(){
     return view('profile');
 });

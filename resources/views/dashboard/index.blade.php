@@ -13,10 +13,10 @@
 
    @foreach ($vehicles as $vehicle)
 
-      <div class="card mb-3 h-100 ">
+      <div class="card mb-3 h-100 shadow">
          <div class="row g-0">
             <div class="col-md-8">
-               <div class="card-body">
+               <div class="card-body ms-3 mt-2">
                   @if ($vehicle->status === 0)
                      <h5 class="card-title">
                         <span class="align-middle me-2" style="height: 25px; width: 25px; background-color: #CC2727; border-radius: 50%; display: inline-block;"></span>
@@ -33,8 +33,11 @@
 
                      <h4 class="mb-1 d-flex align-item-center">
                         {{ $vehicle->carName }}
-                        <a href="/cardetails" class="float-start">
+                        <a href="/dashboard/carManager/updateVehicle/{{ $vehicle->id }}" class="float-start">
                            <img class="ms-2" src="https://img.icons8.com/material-outlined/384/000000/edit--v1.png" style="width: 20px ; height: 20px ; "/>
+                        </a>
+                        <a href="/dashboard/carManager/deleteVehicle/{{ $vehicle->id }}" class="float-start">
+                           <img class="ms-2" src="https://img.icons8.com/ios-glyphs/384/000000/trash--v1.png" style="width: 20px ; height: 20px ; "/>
                         </a>
                      </h4>
                      <h6 class="mb-2">
@@ -81,13 +84,7 @@
              
                   </p>
 
-                  <div class="mb-4">
-                     <a href="/cardetails" class="float-start">
-                        <button type="button" class="btn btn-danger me-3 mb-4">
-                           <small>DELETE</small>
-                        </button>
-                     </a>
-                  </div>
+                  
 
                </div>
             </div>
