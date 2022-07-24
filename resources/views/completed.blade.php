@@ -24,7 +24,6 @@
             </div>
             <div class="d-flex gap-1 m-2">
                 <div>
-                    {{--<button class="w-100 btn" type="submit" style="background-color: #354259; color: #c2ded1;">COMMENTS</button>--}}
                     <button class="W-100 btn btn-dark float-end m-3" style="width:120px" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMMENTS</button>
 
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
