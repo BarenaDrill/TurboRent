@@ -2,8 +2,12 @@
 
 @section('container')
     <div class="d-flex">
-        <div class="position-absolute start-0 flex-fill" style="background-color:#c2ded1; height:500px; width: 460px;">
-            <div class="d-flex" style="width: 460px; height:50px; background-color:#e0f6eb;">
+        <div class="body0" style="display:flex; flex-direction:row ">
+            <div class="body1">
+
+            
+        <div class="position-absolute start-0 flex-fill" style="background-color:#c2ded1; height:500px; width: 530px;">
+            <div class="d-flex" style="width: 530px; height:50px; background-color:#e0f6eb;">
                 <div class="flex-column">
                     <div class="mt-2 ms-5" style="">
                         <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="" style="width:30px; height:30px;" alt="...">
@@ -20,13 +24,13 @@
 
             {{-- @foreach ($cars as $car) --}}
 
-            <div class="details" style="height:210px;">
+            <div class="details" style="height:230px;">
             <div class="d-flex" style="height:120px;">
 
                 <div class="flex-row" style="">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         @if($car->carType == "Manual")
-                            <img src="public\storage\detail-icons\manual.png" class="card-img-top" alt="...">
+                            <img src="{{ asset('storage\detail-icons\manual.png') }}" class="card-img-top" alt="...">
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Manual</b></p>
                             </div>
@@ -59,17 +63,17 @@
                 <div class="flex-row" style="">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/6332/6332163.png" class="card-img-top" alt="...">
-                        @if($car->seat == "2 seater")
+                        @if($car->seat == "2 Seater")
                             <div class="card-body" style="text-align: center">
-                                <p class="card-text mt-1"><b>2+ seater</b></p>
+                                <p class="card-text mt-1"><b>2 seater</b></p>
                               </div>
-                        @elseif($car->seat == "4 seater")
+                        @elseif($car->seat == "4 Seater")
                             <div class="card-body" style="text-align: center">
-                            <p class="card-text mt-1"><b>4+ seater</b></p>
+                            <p class="card-text mt-1"><b>4 seater</b></p>
                           </div>
-                        @elseif($car->seat ==  "6 seater")
+                        @elseif($car->seat == "6 Seater")
                           <div class="card-body" style="text-align: center">
-                          <p class="card-text mt-1"><b>4+ seater</b></p>
+                          <p class="card-text mt-1"><b>6 seater</b></p>
                         </div>
                         @endif
                     </div>
@@ -82,11 +86,11 @@
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Front-Wheel</b></p>
                               </div>
-                        @elseif($car->seat == "Rear-Wheel Drive")
+                        @elseif($car->wheelModel == "Rear-Wheel Drive")
                             <div class="card-body" style="text-align: center">
                             <p class="card-text mt-1"><b>Rear-Wheel</b></p>
                           </div>
-                        @elseif($car->seat == "Four-Wheel Drive")
+                        @elseif($car->wheelModel == "Four-Wheel Drive")
                           <div class="card-body" style="text-align: center">
                           <p class="card-text mt-1"><b>Four-Wheel</b></p>
                         </div>
@@ -158,7 +162,7 @@
                     <h4 style="margin-top:5px; margin-left: 40px;"><b>Price : </h4>
                 </div>
                 <div class="flex-column">
-                    <h5 style="margin-top:9px;color:#354259; margin-left: 10px;"> <!--car->price--> </b> per day</h5>
+                    <h5 style="margin-top:9px;color:#354259; margin-left: 10px;"> {{ $car->price }} </b> per day</h5>
                 </div>
             </div>
 
@@ -201,21 +205,24 @@
             </div>
 
         </div>
+    </div>
+
+    <div class="body2">
 
         <div class="content" style="display: flex; flex-direction:column;">
             <div class="carous">
-                <div id="carouselExampleCaptions" class="carousel carousel-dark slide flex-fill w-65 mt-4" style="margin-left: 470px; justify-content:center; text-align:center;" data-bs-ride="false">
-                    <h3  style="color:#354259; margin-bottom:20px;">HONDA HR-V 2022</h3>
+                <div id="carouselExampleCaptions" class="carousel carousel-dark slide flex-fill w-65 mt-4" style="margin-left: 540px; justify-content:center; text-align:center;" data-bs-ride="false">
+                    <h3  style="color:#354259; margin-bottom:20px;">{{ $car->carName }}</h3>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://media.suara.com/pictures/653x366/2022/03/23/20706-all-new-honda-hr-v-2022-01.jpg" class="d-block w-100" alt="...">
+                            <img src="/storage/carImage/{{ $car->carImage }}"class="d-block " alt="..." style="height:320px; width:550px;">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="comments" style="margin-left:470px; margin-top:20px;">
-                    <div class="col-sm-6">
+            <div class="comments" style="margin-left:700px; margin-top:20px;">
+                    <div class="col-sm-8">
                         <div class="card" style="background-color: #c2ded1">
                             <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
                                 @foreach ($comments as $comment)
@@ -249,4 +256,6 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 @endsection
