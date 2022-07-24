@@ -24,8 +24,36 @@
             </div>
             <div class="d-flex gap-1 m-2">
                 <div>
-                    <button class="w-100 btn" type="submit" style="background-color: #354259; color: #c2ded1;">COMMENTS</button>
-                </div>   
+                    {{--<button class="w-100 btn" type="submit" style="background-color: #354259; color: #c2ded1;">COMMENTS</button>--}}
+                    <button class="W-100 btn btn-dark float-end m-3" style="width:120px" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMMENTS</button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">COMMENT</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="comment_field">Comment</label>
+                                        <textarea type="comment" name="comment" id="comment_field" class="form-control form px-5-control-lg"></textarea>
+                                    </div>
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="rate_field">Rate</label>
+                                        <input type="number" name="number" id="rate_field" class="form-control form px-5-control-lg">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <form method="post" action="/completed">
+                                        @csrf
+                                        <button type="submit" class="btn btn-dark">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
