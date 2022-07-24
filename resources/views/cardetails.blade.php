@@ -18,7 +18,6 @@
 
             </div>
 
-<<<<<<< HEAD
             @foreach ($cars as $car)
 
             <div class="details" style="height:210px;">
@@ -57,10 +56,6 @@
                 </div>
 
                 <div class="flex-row" style="">
-=======
-            <div class="d-flex">
-                <div class="flex-row">
->>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/6332/6332163.png" class="card-img-top" alt="...">
                         @if(strcmp($car->seat, "2 seater"))
@@ -222,7 +217,7 @@
                     <div class="col-sm-6">
                         <div class="card" style="background-color: #c2ded1">
                             <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                                {{-- @foreach ($comments as $comment)
+                                @foreach ($comments as $comment)
                                 <div class="carousel-inner">
                                     @foreach ($users as $user)
                                         @if ($user->id == $comment->userID)
@@ -237,7 +232,7 @@
                                         @endif
                                     @endforeach
                                 </div>
-                                @endforeach --}}
+                                @endforeach
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
