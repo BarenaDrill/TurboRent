@@ -16,27 +16,22 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->longText('address');
             $table->string('email')->unique();
-            $table->date('birthdate');
-            $table->string('NIK')->unique();
-            $table->string('KTPimage');
-            $table->string('phoneNumber');
-            $table->string('profilePhoto');
-
-            $table->integer('carQuantity');
-            $table->integer('income');
-
-            $table->foreignId('wishlistID');
-            
-            $table->string('accountNumber');
-            $table->string('proofImage');
-
-            $table->foreignId('commentID');
-
+            $table->string('address');
+            // $table->date('birthdate');
+            // $table->string('nik')->unique();
+            $table->string('phone');
+            $table->string('ktp');
+            $table->string('profile');
             $table->string('password');
+            $table->integer('income');
+            $table->integer('carQuantity');
             $table->timestamps();
-            
+
+            // $table->foreignId('wishlistID');
+            // $table->string('accountNumber');
+            // $table->string('proofImage');
+            // $table->foreignId('commentID');
             // $table->timestamp('email_verified_at')->nullable();
             // $table->rememberToken();
         });

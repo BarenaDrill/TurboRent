@@ -21,11 +21,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -58,7 +54,7 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
-    public function wishlist(){
-        return $this->hasOne(Wishlist::class);
+    public function wishlists(){
+        return $this->hasMany(Wishlist::class);
     }
 }

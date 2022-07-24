@@ -1,73 +1,54 @@
 @extends('layouts.main')
 
-@section('container')
-    <div class="text-center m-4">
-        <img class="rounded-circle z-depth-2 shadow" width="100" src="https://avatars.githubusercontent.com/u/1071625?v=4" data-holder-rendered="true">
-        <h5 class="mt-2 fs-4" style="color:#fcf0c8"><strong>MY NAME</h5>
-    </div>   
+@section('title')
+    Profile
+@endsection
 
-    <div class="d-flex justify-content-center">
-        <div class="rounded shadow" style="width:700px; background-color: #fcf0c8">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">NAME</h5>
-                        <p class="card-text"><small class="text-muted">My Name</small></p>
-                    </div>
+@section('container')
+
+    
+    {{-- <div class="m-4">
+        <img class="rounded-circle z-depth-2 shadow" width="170px" src="https://avatars.githubusercontent.com/u/1071625?v=4" data-holder-rendered="true">
+    </div>    --}}
+
+    <div class="mt-4">
+        <img class="rounded z-depth-2 shadow" width="150px" src="{{ asset('storage/' . auth()->user()->profile) }}">
+        <div class="d-flex justify-content-between">
+            <div style="width:500px;">
+                <h4 class="mt-2">Name</h4>
+                <div class="rounded p-1 row align-items-center mx-0 shadow" style="background-color: #c2ded1;">
+                    <div class="col">{{ auth()->user()->name }}</div>
                 </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Edit</button>
-                    </form>   
+                <h4 class="mt-2">Email</h4>
+                <div class="rounded p-1 row align-items-center mx-0 shadow" style="background-color: #c2ded1;">
+                    <div class="col">{{ auth()->user()->email }}</div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">ADDRESS</h5>
-                        <p class="card-text"><small class="text-muted">My Address</small></p>
-                    </div>
+                <h4 class="mt-2">Address</h4>
+                <div class="rounded p-1 row align-items-center mx-0 shadow" style="background-color: #c2ded1;">
+                    <div class="col">{{ auth()->user()->address }}</div>
                 </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Edit</button>
-                    </form>   
+                <h4 class="mt-2">Phone Number</h4>
+                <div class="rounded p-1 row align-items-center mx-0 shadow" style="background-color: #c2ded1;">
+                    <div class="col">{{ auth()->user()->phone }}</div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">EMAIL</h5>
-                        <p class="card-text"><small class="text-muted">My Email</small></p>
-                    </div>
+            </div>    
+            <div style="width:500px;">
+                <h4 class="mt-2">Password</h4>
+                <div class="rounded p-1 row align-items-center mx-0 shadow" style="background-color: #c2ded1;">
+                    <div class="col">*********</div>
                 </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Edit</button>
-                    </form>   
+                <h4 class="mt-2">KTP</h4>
+                <div>
+                    <a href="#">
+                        <img src="https://disdukcapil.cilacapkab.go.id/upaaaaa/2022/02/ktp.jpg" style="width:200px;">
+                    </a>
                 </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <div class="m-3">
-                        <h5 class="card-title">PASSWORD</h5>
-                        <p class="card-text"><small class="text-muted">********</small></p>
-                    </div>
+                <br>
+                <div class="mt-1">
+                    <a href="#" class="text-decoration-none p-2 px-5 text-white rounded" style="background-color: #354259;">UPDATE</a>
                 </div>
-                <div class="m-2 text-center">
-                    <form action="#" method="post">
-                        @csrf
-                        @method('delete')
-                        <button class="w-100 btn btn-dark" type="submit">Change</button>
-                    </form>   
-                </div>
-            </div>
+            </div>    
         </div>
-    </div>    
+
+    </div>
 @endsection

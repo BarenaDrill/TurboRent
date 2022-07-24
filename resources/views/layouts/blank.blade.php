@@ -19,7 +19,7 @@
   </head>
   <body>
 
-    @include('partials.navbar')
+    {{-- @include('partials.navbar') --}}
     
     {{-- body --}}
     <div class="container">

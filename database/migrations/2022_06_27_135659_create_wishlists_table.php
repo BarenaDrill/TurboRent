@@ -17,7 +17,6 @@ class CreateWishlistsTable extends Migration
             $table->id();
             $table->foreignId('carID');
             $table->foreignId('userID');
-
             $table->timestamps();
         });
     }

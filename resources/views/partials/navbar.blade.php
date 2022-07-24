@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg m-0" style="background-color: #630a10">
+<nav class="navbar navbar-expand-lg m-0" style="background-color: #c2ded1">
   <div class="container-fluid">
     <div class="mx-3">
       <a class="navbar-brand" href="/"><img src="/img/logo.png" style="width:160px;"></a>
@@ -9,65 +9,62 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       
-      <ul class="navbar-nav ms-auto ">
+      <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
-                <h4 style="color: #630a10;">
-                  Home
-                </h4>
-              </div>
-            </a>
+          <a class="nav-link" aria-current="page" href="/">
+            <h5 style="color: #354259">Home</h5>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/rentFeeds">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
-                <h4 style="color: #630a10;">
-                  Rent
-                </h4>
-              </div>
-            </a>  
+            <h5 style="color: #354259">Rent</h5>
+          </a>  
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/host">
-              <div class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
-                <h4 style="color: #630a10;">
-                  Host
-                </h4>
-              </div>
-            </a>  
+          <a class="nav-link" aria-current="page" href="/wishlist">
+            <h5 style="color: #354259">Wishlist</h5>
+          </a>  
         </li>
-        
-      
-        <div class="btn-group">
-          <a class="nav-link" aria-current="page" href="/account">
-            <button type="button" class="btn align-self-center" style="background-color: #fbefc7; width: 115px; height: 50px;">
-              <h4 style="color: #630a10;">
-                Account
-              </h4>
-            </button>
-          </a>
-          
-          <button type="button" class="btn align-self-center dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #fbefc7; height: 50px;" >
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end"style="width: 10px;">
-            <li><a class="dropdown-item" href="/register">Register</a></li>
-            {{-- <li><a class="dropdown-item" href="/register">Logout</a></li> --}}
-          </ul>
-        </div>
-
-        {{-- <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
-              <div class="align-self-center">
-                <h4 style="color: #fbefc7;">
-                  Logout
-                </h4>
-              </div>
-            </a>  
-        </li> --}}
-
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/orders">
+            <h5 style="color: #354259">Orders</h5>
+          </a>  
+        </li>
       </ul>
+      <ul class="navbar-nav mx-4 ms-auto">
+        @auth
+          <div class="d-flex gap-2">
+            <a class="text-decoration-none" style="color: #354259" href="/profile">
+              <h5 style="color: #354259">{{ auth()->user()->name }}</h5>  
+            </a>
+            <a style="color: #354259" type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+              <span class="visually-hidden">  Toggle Dropdown</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end mx-4" aria-labelledby="navbarDropdown">
+              <li>
+                <form action="/logout" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+              </li>
+              <li><a class="dropdown-item" href="/dashboard">As Host</a></li>
+              <li><a class="dropdown-item" href="/">As Rent</a></li>
+            </ul>
+          </div>
+        @else
+          <div class="d-flex gap-2">
+            <a class="text-decoration-none" style="color: #354259" href="/profile">
+              <h5 style="color: #354259">Guest</h5>  
+            </a>
+            <a style="color: #354259" type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+              <span class="visually-hidden">  Toggle Dropdown</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end mx-4" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/login">Login</a></li>
+            </ul>
+          </div>
+        @endauth  
+      </ul>  
     </div>
   </div>
 </nav>

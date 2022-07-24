@@ -20,12 +20,12 @@ class CreateCarsTable extends Migration
             $table->integer('price');
             $table->string('carImage');
             
-            $table->foreignId('userID');
+            $table->foreignId('userID'); // buat nampilin di income
             $table->longText('carAddress');
             
-            $table->foreignId('commentID');
-            $table->string('status');
-            $table->float('rating');
+            // $table->foreignId('commentID');
+            $table->integer('status'); //buat tampilin status booking, *pake int/bool aja biar gampang check
+            $table->float('totalRating'); //total dari all comment 10 -> 3 = jumlah rating/jumlah user = 3
             
             // DESCRIPTION
             $table->string('carType');

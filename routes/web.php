@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HostController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,12 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/register', function(){
-    return view('register');
-});
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/account', function(){
     return view('account');
@@ -42,9 +47,7 @@ Route::get('/help', function(){
     return view('help');
 });
 
-Route::get('/login', function(){
-    return view('login');
-});
+
 
 Route::get('/cardetails', function(){
     return view('cardetails');
@@ -58,7 +61,19 @@ Route::get('/rentFeeds', function(){
     return view('rentFeeds');
 });
 
+Route::get('/orders', function(){
+    return view('orders');
+});
+Route::get('/completed', function(){
+    return view('completed');
+});
+
 Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
+
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
+});
+
 
 
