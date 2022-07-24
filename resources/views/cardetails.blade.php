@@ -8,13 +8,15 @@
                     <div class="mt-2 ms-5" style="">
                         <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="" style="width:30px; height:30px;" alt="...">
                     </div>
-                </div>
+                </div>              
                 <div class="flex-column">
                     <div class="ms-3" style="margin-top:10px;">
                       <p class="card-text"><b>Hosted By</b></p>
                     </div>
                 </div>
+                
             </div>
+            
             <div class="d-flex">
                 <div class="flex-row">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
