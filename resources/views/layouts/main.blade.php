@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-<<<<<<< HEAD
 
-=======
->>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

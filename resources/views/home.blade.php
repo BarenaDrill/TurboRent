@@ -24,9 +24,6 @@
                         <img src="/storage/carImage/{{ $vehicle->carImage }}" class="d-block w-100 rounded" alt="...">
                     </div>
                 @endforeach
-                <div class="carousel-item active">
-                    <img src="/storage/carImage/heli.jpg" class="d-block w-100 rounded" alt="...">
-                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

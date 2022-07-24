@@ -62,8 +62,8 @@
                 </form>
               </li>
               <li><a class="dropdown-item" href="/profile">Profile</a></li>
-              <li><a class="dropdown-item" href="#">As Host</a></li>
-              <li><a class="dropdown-item" href="/index">As Rent</a></li>
+              <li><a class="dropdown-item" href="/dashboard">As Host</a></li>
+              <li><a class="dropdown-item" href="/">As Rent</a></li>
             </ul>
           </li>
         @else

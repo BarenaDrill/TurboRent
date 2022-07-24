@@ -12,26 +12,27 @@
                 <div class="flex-column">
 
                     <div class="ms-3" style="margin-top:10px;">
-                      <p class="card-text"><b>Hosted By</b></p>
+                      <p class="card-text"><b>Hosted By {{ $user->name }}</b></p>
                     </div>
                 </div>
 
             </div>
 
-            @foreach ($cars as $car)
+            {{-- @foreach ($cars as $car) --}}
 
             <div class="details" style="height:210px;">
             <div class="d-flex" style="height:120px;">
 
                 <div class="flex-row" style="">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
-                        @if(strcmp($car->carType, "Manual"))
-                            <img src="https://cdn-icons-png.flaticon.com/512/7619/7619108.png" class="card-img-top" alt="...">
+                        @if($car->carType == "Manual")
+                            <img src="public\storage\detail-icons\manual.png" class="card-img-top" alt="...">
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Manual</b></p>
                             </div>
-                        @elseif(strcmp($car->carType, "Automatic"))
-                            <img src="https://cdn-icons-png.flaticon.com/512/7619/7619108.png" class="card-img-top" alt="...">
+                        @elseif($car->carType == "Automatic")
+                        {{-- ini kalau mau pke gambar dari storage --}}
+                            <img src="{{ asset('storage\detail-icons\automatic.png') }}" class="card-img-top" alt="...">
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Automatic</b></p>
                             </div>
@@ -41,12 +42,12 @@
 
                 <div class="flex-row" style="">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
-                        @if(strcmp($car->fuelType, "Petrol"))
+                        @if($car->fuelType == "Petrol")
                             <img src="https://cdn-icons-png.flaticon.com/512/2933/2933927.png" class="card-img-top" alt="...">
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Petrol</b></p>
                             </div>
-                        @elseif(strcmp($car->fuelType, "Electric"))
+                        @elseif($car->fuelType == "Electric")
                             <img src="https://cdn-icons-png.flaticon.com/512/1144/1144371.png" class="card-img-top" alt="...">
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Electric</b></p>
@@ -58,15 +59,15 @@
                 <div class="flex-row" style="">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/6332/6332163.png" class="card-img-top" alt="...">
-                        @if(strcmp($car->seat, "2 seater"))
+                        @if($car->seat == "2 seater")
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>2+ seater</b></p>
                               </div>
-                        @elseif(strcmp($car->seat, "4 seater"))
+                        @elseif($car->seat == "4 seater")
                             <div class="card-body" style="text-align: center">
                             <p class="card-text mt-1"><b>4+ seater</b></p>
                           </div>
-                        @elseif(strcmp($car->seat, "6 seater"))
+                        @elseif($car->seat ==  "6 seater")
                           <div class="card-body" style="text-align: center">
                           <p class="card-text mt-1"><b>4+ seater</b></p>
                         </div>
@@ -77,15 +78,15 @@
                 <div class="flex-row" style="">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/4606/4606838.png" class="card-img-top" alt="...">
-                        @if(strcmp($car->wheelModel, "Front-Wheel Drive"))
+                        @if($car->wheelModel == "Front-Wheel Drive")
                             <div class="card-body" style="text-align: center">
                                 <p class="card-text mt-1"><b>Front-Wheel</b></p>
                               </div>
-                        @elseif(strcmp($car->seat, "Rear-Wheel Drive"))
+                        @elseif($car->seat == "Rear-Wheel Drive")
                             <div class="card-body" style="text-align: center">
                             <p class="card-text mt-1"><b>Rear-Wheel</b></p>
                           </div>
-                        @elseif(strcmp($car->seat, "Four-Wheel Drive"))
+                        @elseif($car->seat == "Four-Wheel Drive")
                           <div class="card-body" style="text-align: center">
                           <p class="card-text mt-1"><b>Four-Wheel</b></p>
                         </div>
@@ -95,7 +96,7 @@
             </div>
 
             <div class="d-flex" style="margin-top:1px; ">
-                @if(strcmp($car->bluetooth, "Available"))
+                @if($car->bluetooth == "Available")
                 <div class="flex-row" style="margin-top:10px;">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/886/886581.png" class="card-img-top" alt="...">
@@ -106,7 +107,7 @@
                 </div>
                 @endif
 
-                @if(strcmp($car->aux, "Available"))
+                @if($car->aux == "Available")
                 <div class="flex-row" style="margin-top:10px;">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/5018/5018118.png" class="card-img-top" alt="...">
@@ -117,7 +118,7 @@
                 </div>
                 @endif
 
-                @if(strcmp($car->childSeat, "Available"))
+                @if($car->childSeat== "Available")
                 <div class="flex-row" style="margin-top:10px;">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/6003/6003929.png" class="card-img-top" alt="...">
@@ -128,7 +129,7 @@
                 </div>
                 @endif
 
-                @if(strcmp($car->petFriendly, "Available"))
+                @if($car->petFriendly== "Available")
                 <div class="flex-row" style="margin-top:10px;">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/489/489868.png" class="card-img-top" alt="...">
@@ -139,7 +140,7 @@
                 </div>
                 @endif
 
-                @if(strcmp($car->noSmoking, "Available"))
+                @if($car->noSmoking== "Available")
                 <div class="flex-row" style="margin-top:10px;">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/2928/2928242.png" class="card-img-top" alt="...">
@@ -161,7 +162,7 @@
                 </div>
             </div>
 
-            @endforeach
+            {{-- @endforeach --}}
 
             <div class="d-flex gap-4" style="justify-content: center; padding-top:20px; background-color:#e0f6eb; padding-bottom:38px;">
 
@@ -219,7 +220,7 @@
                             <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
                                 @foreach ($comments as $comment)
                                 <div class="carousel-inner">
-                                    @foreach ($users as $user)
+                                    {{-- @foreach ($users as $user) --}}
                                         @if ($user->id == $comment->userID)
                                             @for ($i = 0; $i < $comment->count(); $i++)
                                             <div class="carousel-item {{ $i == 0 ? 'active' : '' }}">
@@ -230,7 +231,7 @@
                                             </div>
                                             @endfor
                                         @endif
-                                    @endforeach
+                                    {{-- @endforeach --}}
                                 </div>
                                 @endforeach
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
