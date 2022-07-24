@@ -54,11 +54,12 @@ Route::get('/completed', function(){
     return view('completed');
 });
 
+Route::get('/cardetails', [UserController::class, 'detail']);
+
 Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
-Route::get('/cardetails',[UserController::class,'detail']);
 
 Route::get('/profile', function(){
     return view('profile');
