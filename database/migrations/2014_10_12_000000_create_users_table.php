@@ -18,22 +18,14 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('address');
-            // $table->date('birthdate');
-            // $table->string('nik')->unique();
-            $table->string('phone');
+            $table->string('role')->default('user');
             $table->string('ktp');
+            $table->string('phone');
             $table->string('profile');
             $table->string('password');
-            $table->integer('income');
             $table->integer('carQuantity');
+            $table->integer('income');
             $table->timestamps();
-
-            // $table->foreignId('wishlistID');
-            // $table->string('accountNumber');
-            // $table->string('proofImage');
-            // $table->foreignId('commentID');
-            // $table->timestamp('email_verified_at')->nullable();
-            // $table->rememberToken();
         });
     }
 

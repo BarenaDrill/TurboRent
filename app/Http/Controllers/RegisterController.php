@@ -30,10 +30,10 @@ class RegisterController extends Controller
         ]);
 
         // if($request->file('ktp')){
-        $validatedData['ktp'] = $request->file('ktp')->store('post-images');
+        $validatedData['ktp'] = $request->file('ktp')->store('ktp-image');
         // }
         // if($request->file('profile')){
-        $validatedData['profile'] = $request->file('profile')->store('post-images');
+        $validatedData['profile'] = $request->file('profile')->store('profile-image');
         // }
 
         $validatedData['carQuantity'] = 0;

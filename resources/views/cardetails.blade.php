@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="flex-row">
                     <div class="card-body ms-5 mt-5" style="width: 90px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/886/886581.png" class="card-img-top" alt="...">
@@ -90,7 +90,7 @@
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#911F27; color:#fcf0c8">
                         Add to wishlist
                     </button>
-  
+
                 <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -115,9 +115,9 @@
                         </div>
                     </div>
             </div>
-  
+
         </div>
-        
+
         <div class="content" style="display: flex; flex-direction:column;">
             <div class="carous">
                 <div id="carouselExampleCaptions" class="carousel carousel-dark slide flex-fill w-65 mt-4" style="margin-left: 470px; justify-content:center; text-align:center;" data-bs-ride="false">
@@ -144,15 +144,21 @@
                     </button>
                 </div>
             </div>
-            
+
             <div class="comments" style="margin-left:470px; margin-top:20px;">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="card text-center" style="height: 120px; background-color: #fcf0c8">
+                        <div class="card text-center" style="height: 250px; background-color: #fcf0c8">
                             <div class="card-body">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 50px; background-color: #fcf0c8"></textarea>
-                                    <label for="floatingTextarea">Comments</label>
+                                    <div>
+                                        <label class="form-label" for="comment_field">Comment</label>
+                                        <textarea type="comment" name="comment" id="comment_field" class="form-control form px-5-control-lg"></textarea>
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="rate_field">Rate</label>
+                                        <input type="number" name="rate" id="rate_field" class="form-control form px-5-control-lg">
+                                    </div>
                                         <div class="col-auto">
                                             <button type="submit" class="btn" style="background-color:#911F27; color:#fcf0c8; margin-top: 7px;">Submit</button>
                                         </div>
@@ -164,26 +170,22 @@
                     <div class="col-sm-6">
                         <div class="card" style="background-color: #fcf0c8">
                             <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                {{-- @foreach ($comments as $comment)
                                 <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <div class="card-body" style="margin-left:35px;">
-                                        <h5 class="card-title">Users #1</h5>
-                                        <p class="card-text">Nice car!</p>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div class="card-body" style="margin-left:35px;">
-                                        <h5 class="card-title">Users #2</h5>
-                                        <p class="card-text">Affordable!</p>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div class="card-body" style="margin-left:35px;">
-                                        <h5 class="card-title">Users #3</h5>
-                                        <p class="card-text">Good host!</p>
-                                    </div>
-                                  </div>
+                                    @foreach ($users as $user)
+                                        @if ($user->id == $comment->userID)
+                                            @for ($i = 0; $i < $comment->count(); $i++)
+                                            <div class="carousel-item {{ $i == 0 ? 'active' : '' }}">
+                                                <div class="card-body" style="margin-left:35px;">
+                                                    <h5 class="card-title">{{$user->name}}</h5>
+                                                    <p class="card-text">{{$comment->comment}}</p>
+                                                </div>
+                                            </div>
+                                            @endfor
+                                        @endif
+                                    @endforeach
                                 </div>
+                                @endforeach --}}
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
@@ -198,8 +200,5 @@
                   </div>
             </div>
         </div>
-                
-        
-
     </div>
 @endsection

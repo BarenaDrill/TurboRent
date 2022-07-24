@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\HostController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,10 +37,6 @@ Route::get('/wishlist', function(){
     return view('wishlist');
 });
 
-Route::get('/profile', function(){
-    return view('profile');
-});
-
 Route::get('/income', function(){
     return view('income');
 });
@@ -47,33 +45,33 @@ Route::get('/help', function(){
     return view('help');
 });
 
-
+Route::get('/rentFeeds', function(){
+    return view('rentFeeds');
+});
 
 Route::get('/cardetails', function(){
     return view('cardetails');
 });
 
-Route::get('/host',function(){
-    return view('host');
-});
-
-Route::get('/rentFeeds', function(){
-    return view('rentFeeds');
+Route::get('/profile', function(){
+    return view('profile');
 });
 
 Route::get('/orders', function(){
     return view('orders');
 });
+
 Route::get('/completed', function(){
     return view('completed');
 });
 
-Route::get('/host', [HostController::class, 'index']);
-Route::get('/host/addCar', [HostController::class, 'add']);
-
-Route::get('/dashboard', function(){
-    return view('dashboard.index');
+Route::get('/admin', function(){
+    return view('admin');
 });
 
 
+Route::get('/host', [HostController::class, 'index']);
+Route::get('/host/addCar', [HostController::class, 'add']);
+
+Route::post('/profile/{id}',[ProfileController::class, 'update']);
 

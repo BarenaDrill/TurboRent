@@ -15,7 +15,7 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->date('bookingDate');
+            // $table->date('bookingDate');
             
             // ID ORANG YANG MINJAM , nama customer
             $table->foreignId('userID');
