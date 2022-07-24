@@ -25,10 +25,34 @@
             <div class="d-flex gap-1 m-2">
                 <div>
                     <button class="w-100 btn btn-danger" type="submit" style="color: #c2ded1;">CANCEL</button>
-                </div>    
+                </div>
                 <div>
-                    <button class="w-100 btn" type="submit" style="background-color: #354259; color: #c2ded1;">PAY</button>
-                </div>    
+                    {{--<button class="w-100 btn" type="submit" style="background-color: #354259; color: #c2ded1;">PAY</button>--}}
+                    <button class="W-100 btn" style="background-color: #354259; color: #c2ded1;" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">PAY</button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">TRANSACTION RECEIPT</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label" for="receipt_field">Transaction Receipt</label>
+                                        <input type="file" name="receipt" id="receipt_field" class="form-control form px-5-control-lg" enctype="multipart/form-data">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <form method="post" action="/orders">
+                                        @csrf
+                                        <button type="submit" class="btn btn-dark">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

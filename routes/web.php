@@ -65,8 +65,27 @@ Route::get('/completed', function(){
     return view('completed');
 });
 
+<<<<<<< HEAD
 Route::get('/admin', function(){
     return view('admin');
+=======
+Route::get('/dashboard', [HostController::class, 'index']);
+Route::get('/dashboard/carManager', [HostController::class, 'index']);
+Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
+Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
+Route::get('/cardetails',[UserController::class,'detail']);
+
+// update 
+Route::get('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'edit']);
+Route::put('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'update']);
+
+// delete 
+Route::get('/dashboard/carManager/deleteVehicle/{id}',[HostController::class, 'destroy']);
+
+
+Route::get('/profile', function(){
+    return view('profile');
+>>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
 });
 
 
