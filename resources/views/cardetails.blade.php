@@ -10,12 +10,15 @@
                     </div>
                 </div>
                 <div class="flex-column">
+
                     <div class="ms-3" style="margin-top:10px;">
                       <p class="card-text"><b>Hosted By</b></p>
                     </div>
                 </div>
+
             </div>
 
+<<<<<<< HEAD
             @foreach ($cars as $car)
 
             <div class="details" style="height:210px;">
@@ -54,6 +57,10 @@
                 </div>
 
                 <div class="flex-row" style="">
+=======
+            <div class="d-flex">
+                <div class="flex-row">
+>>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
                         <img src="https://cdn-icons-png.flaticon.com/512/6332/6332163.png" class="card-img-top" alt="...">
                         @if(strcmp($car->seat, "2 seater"))
@@ -162,6 +169,9 @@
             @endforeach
 
             <div class="d-flex gap-4" style="justify-content: center; padding-top:20px; background-color:#e0f6eb; padding-bottom:38px;">
+
+            <div class="d-flex gap-4" style="justify-content: center; margin-top:20px;">
+
                  <!-- Button trigger modal -->
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Book Now</b>

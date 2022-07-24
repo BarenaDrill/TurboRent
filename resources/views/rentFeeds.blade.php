@@ -21,7 +21,7 @@
                     <h5 class="card-title" style="color: #354259;"><strong>Car Name</strong></h5>
                     <p class="card-text" style="color: #354259;">IDR 300.000</p>
                 </div>
-                    <a href="/cardetails" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
+                    <a href="/cardetails/{{}}" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
