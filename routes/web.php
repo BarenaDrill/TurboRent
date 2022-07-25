@@ -6,12 +6,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
-<<<<<<< HEAD
 use App\Http\Controllers\TransactionController;
 use App\Models\User;
-=======
 use App\Models\Car;
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -67,13 +64,10 @@ Route::get('/completed', function(){
     return view('completed');
 });
 
-<<<<<<< HEAD
-=======
 Route::get('/admin', function(){
     return view('admin');
 });
 
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
@@ -98,7 +92,6 @@ Route::get('/profile', function(){
 Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
 
-<<<<<<< HEAD
 Route::post('/profile/{id}',[ProfileController::class, 'update']);
 
 Route::get('/orders', [BookingController::class, 'showBookings']);
@@ -108,6 +101,4 @@ Route::post('/orders/{id}', [BookingController::class, 'update']);
 
 Route::get('/admin', [UserController::class, 'showTrc']);
 
-=======
 Route::post('/profile/{id}',[ProfileController::class, 'update']);
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
