@@ -38,19 +38,19 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color: #c2ded1">
                 <div class="position-sticky pt-3">
-                    <ul class="nav flex-column mt-4">
+                    <ul class="nav flex-column ms-3 mt-4">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/dashboard/carManager">
+                            <a class="nav-link " aria-current="page" href="/dashboard/carManager">
                                 <span class="align-text-bottom"></span>
                                 <h5>Car Manager</h5>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <span class="align-text-bottom"></span>
                                 <h5>Income</h5>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </nav>

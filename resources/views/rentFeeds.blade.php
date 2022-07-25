@@ -13,69 +13,39 @@
     </div>
 
     <div class="mt-3 row">
-        {{-- TINGGAL LOOPING SEMUA CAR DISINI --}}
-        @foreach ($vehicles as $vehicle)
-            <div class="col-md-3 mb-4">
-                <div class="card shadow">
-                    <img src="/storage/carImage/{{ $vehicle->carImage }}" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: #354259;"><strong>{{ $vehicle->carName }}</strong></h5>
-                        <p class="card-text" style="color: #354259;">IDR {{ number_format($vehicle->price) }}</p>
+        <div class="row row-cols-1 row-cols-md-4">
+            @foreach ($vehicles as $vehicle)
+                <div class="col mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="" style="">
+                            <img src="/storage/carImage/{{ $vehicle->carImage }}" alt="..." class="img-fluid" style="height: 200px; width:100%">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #354259;"><strong>{{ $vehicle->carName }}</strong></h5>
+                            <p class="card-text" style="color: #354259;">IDR {{ number_format($vehicle->price) }}</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="/cardetails/{{ $vehicle->id }}" style="background-color: #c2ded1; color: #354259;" class="btn m-1 w-100">DETAIL</a>
+                        </div>
                     </div>
-                        <a href="/cardetails/{{ $vehicle->id }}" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
+                </div>
+            @endforeach
+                <div class="col mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="" style="">
+                            <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" alt="..." class="img-fluid" style="height: 200px; width:100%">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #354259;"><strong>Toyota Rush</strong></h5>
+                            <p class="card-text" style="color: #354259;">IDR 300.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="/cardetails/1" style="background-color: #c2ded1; color: #354259;" class="btn m-1 w-100">DETAIL</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        @endforeach
+        {{-- TINGGAL LOOPING SEMUA CAR DISINI --}}
         
-        <div class="col-md-3 mb-4">
-            <div class="card shadow">
-                <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: #354259;"><strong>Car Name</strong></h5>
-                    <p class="card-text" style="color: #354259;">IDR 300.000</p>
-                </div>
-                    <a href="/cardetails" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow">
-                <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: #354259;"><strong>Car Name</strong></h5>
-                    <p class="card-text" style="color: #354259;">IDR 300.000</p>
-                </div>
-                    <a href="/cardetails" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow">
-                <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: #354259;"><strong>Car Name</strong></h5>
-                    <p class="card-text" style="color: #354259;">IDR 300.000</p>
-                </div>
-                    <a href="/cardetails" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow">
-                <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: #354259;"><strong>Car Name</strong></h5>
-                    <p class="card-text" style="color: #354259;">IDR 300.000</p>
-                </div>
-                    <a href="/cardetails" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow">
-                <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: #354259;"><strong>Car Name</strong></h5>
-                    <p class="card-text" style="color: #354259;">IDR 300.000</p>
-                </div>
-                    <a href="/cardetails" style="background-color: #c2ded1; color: #354259;" class="btn m-1">DETAIL</a>
-            </div>
-        </div>
-    </div>
+
 @endsection

@@ -22,9 +22,9 @@
                     <h5 class="card-title fs-4" style="color: #354259;"><strong>Car Name</strong></h5>
                 </div>
             </div>
-            <div class="d-flex gap-1 m-2">
-                <div>
-                    <button class="W-100 btn btn-dark float-end m-3" style="width:120px" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMMENTS</button>
+            {{-- <div class="d-flex gap-1 m-2"> --}}
+                {{-- <div> --}}
+                    {{-- <button class="W-100 btn btn-dark float-end m-3" style="width:120px" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMMENTS</button>
 
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -49,11 +49,11 @@
                                         <button type="submit" class="btn btn-dark">Submit</button>
                                     </form>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </div> --}}
+                        {{-- </div> --}}
+                    {{-- </div> --}}
+                {{-- </div> --}}
+            {{-- </div> --}}
         </div>
     </div>
 @endsection
