@@ -12,16 +12,18 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function detail(){
-        $user = User::all();
-        $car = Car::all();
+    public function detail($id){
+        
+        $car = Car::all()->where('id',$id)->first();
+        $user = User::all()->where('id',$car->userID)->first();
         $comment = Comment::all();
 
         return view('cardetails',
         [
-            'users' => $user,
-            'cars' => $car,
-            'comments' => $comment
+            'user' => $user,
+            'car' => $car,
+            'comments' => $comment,
+      
         ]);
     }
 
@@ -34,3 +36,5 @@ class UserController extends Controller
         ]);
     }
 }
+
+

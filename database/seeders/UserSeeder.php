@@ -27,7 +27,11 @@ class UserSeeder extends Seeder
                 "carQuantity" => 0,
                 "income" => 0,
                 "password" => Hash::make("anton123"),
+<<<<<<< HEAD
                 "role" => "user"
+=======
+                "role" => 'user'
+>>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
             ],
             [
                 "id" => 2,
@@ -40,7 +44,11 @@ class UserSeeder extends Seeder
                 "carQuantity" => 0,
                 "income" => 0,
                 "password" => Hash::make("budi123"),
+<<<<<<< HEAD
                 "role" => "user"
+=======
+                "role" => 'admin'
+>>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
             ],
             [
                 "id" => 3,
@@ -53,7 +61,11 @@ class UserSeeder extends Seeder
                 "carQuantity" => 0,
                 "income" => 0,
                 "password" => Hash::make("tono123"),
+<<<<<<< HEAD
                 "role" => "user"
+=======
+                "role" => 'user'
+>>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
             ],
         ]);
     }

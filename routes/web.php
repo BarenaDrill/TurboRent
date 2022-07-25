@@ -6,8 +6,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+<<<<<<< HEAD
 use App\Http\Controllers\TransactionController;
 use App\Models\User;
+=======
+use App\Models\Car;
+>>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +26,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+        'vehicles' => Car::all()
+    ]);
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
@@ -45,12 +51,11 @@ Route::get('/help', function(){
 });
 
 Route::get('/rentFeeds', function(){
-    return view('rentFeeds');
+    return view('rentFeeds',[
+        'vehicles' => Car::all() 
+    ]);
 });
 
-Route::get('/cardetails', function(){
-    return view('cardetails');
-});
 
 Route::get('/profile', function(){
     return view('profile');
@@ -62,11 +67,20 @@ Route::get('/completed', function(){
     return view('completed');
 });
 
+<<<<<<< HEAD
+=======
+Route::get('/admin', function(){
+    return view('admin');
+});
+
+>>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
 Route::post('/dashboard/carManager/addVehicle',[HostController::class,'store']);
-Route::get('/cardetails',[UserController::class,'detail']);
+Route::get('/cardetails/{id}',[UserController::class,'detail']);
+
+Route::post('/cardetails/{id}',[BookingController::class, 'store']);
 
 // update 
 Route::get('/dashboard/carManager/updateVehicle/{id}',[HostController::class, 'edit']);
@@ -84,6 +98,7 @@ Route::get('/profile', function(){
 Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
 
+<<<<<<< HEAD
 Route::post('/profile/{id}',[ProfileController::class, 'update']);
 
 Route::get('/orders', [BookingController::class, 'showBookings']);
@@ -93,3 +108,6 @@ Route::post('/orders/{id}', [BookingController::class, 'update']);
 
 Route::get('/admin', [UserController::class, 'showTrc']);
 
+=======
+Route::post('/profile/{id}',[ProfileController::class, 'update']);
+>>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
