@@ -27,6 +27,10 @@ class Car extends Model
         return $this->hasMany(Booking::class);
     }
 
+    public function transactions(){
+        return $this->hasMany(Transactions::class);
+    }
+
     public function wishlist(){
         return $this->belongsTo(Wishlist::class);
     }

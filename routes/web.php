@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransactionController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,10 +31,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
-
-Route::get('/account', function(){
-    return view('account');
-});
 
 Route::get('/wishlist', function(){
     return view('wishlist');
@@ -57,18 +56,12 @@ Route::get('/profile', function(){
     return view('profile');
 });
 
-Route::get('/orders', function(){
-    return view('orders');
-});
+
 
 Route::get('/completed', function(){
     return view('completed');
 });
 
-<<<<<<< HEAD
-Route::get('/admin', function(){
-    return view('admin');
-=======
 Route::get('/dashboard', [HostController::class, 'index']);
 Route::get('/dashboard/carManager', [HostController::class, 'index']);
 Route::get('/dashboard/carManager/addVehicle', [HostController::class, 'add']);
@@ -85,7 +78,6 @@ Route::get('/dashboard/carManager/deleteVehicle/{id}',[HostController::class, 'd
 
 Route::get('/profile', function(){
     return view('profile');
->>>>>>> 9e95b45afc16627fcb6ca596874f627012523e59
 });
 
 
@@ -93,4 +85,11 @@ Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
 
 Route::post('/profile/{id}',[ProfileController::class, 'update']);
+
+Route::get('/orders', [BookingController::class, 'showBookings']);
+Route::get('/completed', [BookingController::class, 'showCompleted']);
+Route::post('/transaction/{id}', [TransactionController::class, 'storeTrc']);
+Route::post('/orders/{id}', [BookingController::class, 'update']);
+
+Route::get('/admin', [UserController::class, 'showTrc']);
 

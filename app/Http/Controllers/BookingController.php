@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Car;
 use App\Models\Booking;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -17,6 +18,22 @@ class BookingController extends Controller
     public function index()
     {
         return view('cardetails');
+    }
+
+    public function showBookings(){
+        return view('orders',[
+            "bookings" => Booking::all(),
+            "cars" => Car::all(),
+            "transactions" => Transaction::all()
+        ]);
+    }
+
+    public function showCompleted(){
+        return view('completed',[
+            "bookings" => Booking::all(),
+            "cars" => Car::all(),
+            "transactions" => Transaction::all()
+        ]);
     }
 
     /**
@@ -92,9 +109,17 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update($id)
+    {   
+        // dd(Transaction::all());
+        $transaction = Transaction::all()->where('bookID', $id);
+        dd($transaction);
+
+        // dd(Booking::all()->where('id', $transaction->bookingID));
+        Booking::where('id', $transaction->bookID)
+                ->update(['status' => 1]);
+        
+        return redirect('/admin');        
     }
 
     /**

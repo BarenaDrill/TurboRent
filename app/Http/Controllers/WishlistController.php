@@ -20,8 +20,9 @@ class WishlistController extends Controller
     public function addWishlist($id){
         
         $car = Car::find($id);
+        dd($car);
         if(Wishlist::where('carID', $car->id)->where('user_id', auth()->user()->id)->exists()){
-            return redirect()->back()->with('failed', 'Game was already in cart');
+            return redirect()->back()->with('failed', 'Vehicle was already in wishlist');
         }else{
             $wishlist = new wishlist;
             $wishlist->userID = auth()->user()->id;

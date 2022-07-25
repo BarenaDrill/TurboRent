@@ -66,7 +66,7 @@
                     </div>
                 </div>    
                 <div style="width:500px;">
-                    <div class="form-floating">
+                    {{-- <div class="form-floating">
                         <p class="mb-0 mt-2" style="color: #354259;"><b>Password</b></p>
                         <div class="mb-3">
                             <input type="password" name="password" class="form-control rounded @error('password') is-invalid @enderror" id="password" required value="{{ auth()->user()->password }}">
@@ -76,7 +76,7 @@
                                 {{ $message }}
                             </div>
                         @enderror
-                    </div>
+                    </div> --}}
                     <h4 class="mt-2">KTP</h4>
                     <div>
                         <a href="/storage/{{ auth()->user()->ktp }}">

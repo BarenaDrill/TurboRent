@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use App\Models\Car;
 use App\Models\User;
 use App\Models\Comment;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -20,6 +22,15 @@ class UserController extends Controller
             'users' => $user,
             'cars' => $car,
             'comments' => $comment
+        ]);
+    }
+
+    public function showTrc(){
+        return view('admin', [
+            "transactions" => Transaction::all(),
+            // "cars" => Car::all(),
+            "users" => User::all(),
+            "bookings" => Booking::all()
         ]);
     }
 }

@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->string('proofImage');
             $table->foreignId('userID');
             $table->foreignId('carID');
+            $table->foreignId('bookID');
             $table->timestamps();
         });
     }
