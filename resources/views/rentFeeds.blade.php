@@ -30,21 +30,7 @@
                     </div>
                 </div>
             @endforeach
-                <div class="col mb-4">
-                    <div class="card h-100 shadow">
-                        <div class="" style="">
-                            <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/01/18122812/Toyota-Rush_01.jpg" alt="..." class="img-fluid" style="height: 200px; width:100%">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #354259;"><strong>Toyota Rush</strong></h5>
-                            <p class="card-text" style="color: #354259;">IDR 300.000</p>
-                        </div>
-                        <div class="card-footer bg-white border-0">
-                            <a href="/cardetails/1" style="background-color: #c2ded1; color: #354259;" class="btn m-1 w-100">DETAIL</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
         {{-- TINGGAL LOOPING SEMUA CAR DISINI --}}
         
 
