@@ -28,11 +28,11 @@
                 <h5 style="color: #354259">Rent</h5>
               </a>  
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" aria-current="page" href="/wishlist">
                 <h5 style="color: #354259">Wishlist</h5>
               </a>  
-            </li>
+            </li> --}}
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="/orders">
                 <h5 style="color: #354259">Orders</h5>

@@ -7,7 +7,7 @@
     
     @foreach ($transactions as $trc)
         {{-- {{ dd($trc) }} --}}
-        {{ $trc->bookID }}
+        {{-- {{ $trc->bookID }} --}}
         <div class="shadow p-2 mb-2 rounded m-3" style="background-color: #c2ded1;">
             <div class="d-flex justify-content-between align-items-center mb-2">
                 <div class="d-flex align-items-center">
@@ -25,7 +25,7 @@
                 </div>
                 @foreach ($bookings as $book)
                     @if($book->id == $trc->bookID)
-                    {{-- {{ dd($book) }} --}}
+                    {{-- {{ dd($book->id) }} --}}
                         @if($book->status == 0)
                             <div class="m-2">
                                 <form action="/orders/{{ $book->id }}" method="post">

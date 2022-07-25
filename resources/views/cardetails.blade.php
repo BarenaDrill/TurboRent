@@ -6,8 +6,8 @@
             <div class="body1">
 
             
-        <div class="position-absolute start-0 flex-fill" style="background-color:#c2ded1; height:500px; width: 530px;">
-            <div class="d-flex" style="width: 530px; height:50px; background-color:#e0f6eb;">
+        <div class="position-absolute start-0 flex-fill" style="background-color:#c2ded1; height:700px; width: 470px;">
+            <div class="d-flex" style="width: 470px; height:50px; background-color:#e0f6eb;">
                 <div class="flex-column">
                     <div class="mt-2 ms-5" style="">
                         <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="" style="width:30px; height:30px;" alt="...">
@@ -24,7 +24,7 @@
 
             {{-- @foreach ($cars as $car) --}}
 
-            <div class="details" style="height:230px;">
+            <div class="details" style="height:450px;">
             <div class="d-flex" style="height:120px;">
 
                 <div class="flex-row" style="">
@@ -144,6 +144,9 @@
                 </div>
                 @endif
 
+                
+            </div>
+            <div class="d-flex">
                 @if($car->noSmoking== "Available")
                 <div class="flex-row" style="margin-top:10px;">
                     <div class="card-body ms-5 mt-4" style="width: 50px;">
@@ -156,6 +159,8 @@
                 @endif
             </div>
             </div>
+
+            
 
             <div class="d-flex card-body" style="margin-top: 70px; background-color:#e0f6eb; padding-top:20px;">
                 <div class="flex-column">
@@ -176,9 +181,9 @@
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Book Now</b>
                     </button>
-                    <button type="button" class="btn" href="/wishlist" style="text-align: center; background-color:#c2ded1; color:#354259">
+                    {{-- <button type="button" class="btn" href="/wishlist" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Add to wishlist</b>
-                    </button>
+                    </button> --}}
 
                 <!-- Modal -->
                 <form method="post" action="{{ url('cardetails',$car->id) }}">

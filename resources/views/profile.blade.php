@@ -14,7 +14,7 @@
       </div>
     @endif
     <h2 class="card-title m-3 mt-3 mb-4" style="color: #354259;">Profile</h2>
-    <form action="/profile/{{ auth()->user()->id }}" method="post">
+    <form action="/profile/{{ auth()->user()->id }}" method="post" class="mt-5">
         @csrf
         <div class="mt-4 m-3">
             <img class="rounded z-depth-2 shadow mt-2" width="200px" src="{{ asset('storage/' . auth()->user()->profile) }}">
@@ -86,10 +86,10 @@
                     <br>
                     <br>
                     {{-- <br> --}}
-                    <div class="mt-1">
+                    {{-- <div class="mt-1"> --}}
                         {{-- <a href="#" class="text-decoration-none p-2 px-5 text-white rounded" style="background-color: #354259;">UPDATE</a> --}}
-                        <button type="submit" class="p-1 px-5 text-white rounded" style="background-color: #354259;">UPDATE</button>
-                    </div>
+                        {{-- <button type="submit" class="p-1 px-5 text-white rounded" style="background-color: #354259;">UPDATE</button> --}}
+                    {{-- </div> --}}
                 </div>    
             </div>
 

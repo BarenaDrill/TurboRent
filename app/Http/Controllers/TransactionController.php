@@ -13,7 +13,7 @@ class TransactionController extends Controller
 
         // dd($request);
         $book = Booking::find($id);
-        dd($book);
+        // dd($book);
 
         $validatedData = $request->validate([
             'proofImage' => 'required|image|file'
@@ -29,6 +29,6 @@ class TransactionController extends Controller
 
         Transaction::create($validatedData);
 
-        return redirect('/admin');
+        return redirect('/orders');
     }
 }

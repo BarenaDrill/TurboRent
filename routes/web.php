@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use App\Models\User;
 use App\Models\Car;
+use App\Models\Wishlist;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,8 +36,13 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/wishlist', function(){
-    return view('wishlist');
+Route::get('/wishlist', function($id){
+
+    $wish = Wishlist::all() ; 
+
+    return view('wishlist',[
+        "wish" => $wish
+    ]);
 });
 
 Route::get('/income', function(){
@@ -52,12 +58,6 @@ Route::get('/rentFeeds', function(){
         'vehicles' => Car::all() 
     ]);
 });
-
-
-Route::get('/profile', function(){
-    return view('profile');
-});
-
 
 
 Route::get('/completed', function(){
@@ -92,7 +92,7 @@ Route::get('/profile', function(){
 Route::get('/host', [HostController::class, 'index']);
 Route::get('/host/addCar', [HostController::class, 'add']);
 
-Route::post('/profile/{id}',[ProfileController::class, 'update']);
+// Route::post('/profile/{id}',[ProfileController::class, 'update']);
 
 Route::get('/orders', [BookingController::class, 'showBookings']);
 Route::get('/completed', [BookingController::class, 'showCompleted']);

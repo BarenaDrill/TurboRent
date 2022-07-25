@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="row mt-4 justify-content-center">
+    {{-- <div class="row mt-4 justify-content-center">
         <div class="col-md-12">
             <form action="/searchGame">
                 <div class="d-flex gap-1 mb-3">
@@ -10,9 +10,9 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="mt-3 row">
+    <div class="mt-5 row">
         <div class="row row-cols-1 row-cols-md-4">
             @foreach ($vehicles as $vehicle)
                 <div class="col mb-4">

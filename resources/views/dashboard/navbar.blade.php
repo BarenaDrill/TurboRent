@@ -9,19 +9,34 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-4 ms-auto">
-        <div class="d-flex gap-2">
-          <a class="text-decoration-none" style="color: #354259" href="/profile">
-              <h5 style="color: #354259">Guest</h5>  
-          </a>
-          <a style="color: #354259" type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-            <span class="visually-hidden">  Toggle Dropdown</span>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end mx-4" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/login">Login</a></li>
-            <li><a class="dropdown-item" href="/dashboard">Login as Host</a></li>
-            <li><a class="dropdown-item" href="/">Login as Rent</a></li>
-          </ul>
-        </div>
+        @auth
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: #354259" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ auth()->user()->name }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <form action="/logout" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+              </li>
+              <li><a class="dropdown-item" href="/profile">Profile</a></li>
+              <li><a class="dropdown-item" href="/dashboard">As Host</a></li>
+              <li><a class="dropdown-item" href="/">As Rent</a></li>
+            </ul>
+          </li>
+        @else
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: #354259" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Guest
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="/login">Login</a></li>
+            </ul>
+          </li>
+        @endauth
+      </ul>  
       </ul>
     </div>   
   </div>

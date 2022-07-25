@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 class BookingController extends Controller
 {
     /**
-<<<<<<< HEAD
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -48,8 +47,6 @@ class BookingController extends Controller
     }
 
     /**
-=======
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -104,7 +101,6 @@ class BookingController extends Controller
         // }
         
     }
-<<<<<<< HEAD
 
     /**
      * Display the specified resource.
@@ -138,12 +134,14 @@ class BookingController extends Controller
     public function update($id)
     {   
         // dd(Transaction::all());
-        $transaction = Transaction::all()->where('bookID', $id);
-        dd($transaction);
+        $transaction = Transaction::all()->where('bookID', $id)->first();
+        // $transaction = Transaction::find($id);
+        // dd($transaction);
 
         // dd(Booking::all()->where('id', $transaction->bookingID));
-        Booking::where('id', $transaction->bookID)
-                ->update(['status' => 1]);
+        $test = Booking::where('id', $transaction->bookID)->update(['status' => 1]); 
+
+        // dd($test);
         
         return redirect('/admin');        
     }
@@ -159,7 +157,5 @@ class BookingController extends Controller
         //
     }
 
-=======
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 }
 

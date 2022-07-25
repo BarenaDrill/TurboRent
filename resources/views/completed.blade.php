@@ -14,7 +14,6 @@
         </div>
     </div>
 
-<<<<<<< HEAD
     @foreach ($bookings as $book)
         @if($book->userID == auth()->user()->id)
             @if($book->status == 1)
@@ -23,29 +22,17 @@
                         @foreach ($cars as $car)
                             @if($car->id == $book->carID)
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ asset('storage/' . $car->image) }}" style="height: 95px;" class="img-fluid rounded mt-1" alt="...">
+                                    <img src="{{ asset('storage/carImage/' . $car->carImage) }}" style="height: 95px;" alt="...">
+                                    {{-- <img src="{{ asset('storage/' . $car->image) }}" style="height: 95px;" class="img-fluid rounded mt-1" alt="..."> --}}
                                     <div class="m-3">
                                         <h5 class="card-title fs-4" style="color: #354259;"><strong>{{ $car->carName }}</strong></h5>
                                     </div>
                                 </div>
                             @endif
                         @endforeach
-                        <div class="d-flex gap-1 m-2">
+                        {{-- <div class="d-flex gap-1 m-2">
                             <div>
                                 <button class="W-100 btn btn-dark float-end m-3" style="width:120px" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMMENTS</button>
-=======
-    <div class="shadow p-2 mb-2 rounded m-3" style="background-color: #c2ded1;">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="d-flex align-items-center">
-                <img src="https://akcdn.detik.net.id/visual/2019/02/28/a02dae3a-28ca-49ce-8596-2f165188872f_169.jpeg?w=650" style="height: 95px;" class="img-fluid rounded mt-1" alt="...">
-                <div class="m-3">
-                    <h5 class="card-title fs-4" style="color: #354259;"><strong>Car Name</strong></h5>
-                </div>
-            </div>
-            {{-- <div class="d-flex gap-1 m-2"> --}}
-                {{-- <div> --}}
-                    {{-- <button class="W-100 btn btn-dark float-end m-3" style="width:120px" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMMENTS</button>
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 
                                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -73,21 +60,11 @@
                                         </div>
                                     </div>
                                 </div>
-<<<<<<< HEAD
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             @endif
         @endif
     @endforeach
-=======
-                            </div> --}}
-                        {{-- </div> --}}
-                    {{-- </div> --}}
-                {{-- </div> --}}
-            {{-- </div> --}}
-        </div>
-    </div>
->>>>>>> d2c2fcdb3a8df33943954f7882ae5351d7828a43
 @endsection

@@ -45,7 +45,7 @@ class HostController extends Controller
         $fileName = $request->carName.'.'.$request->carImage->extension();
 
         $request->file('carImage')->storeAs(
-            'public/carImage', $fileName
+            'carImage', $fileName
         );
         
         Car::create([
@@ -112,7 +112,7 @@ class HostController extends Controller
             $fileName = $request->carName.'.'.$request->carImage->extension();
     
             $request->file('carImage')->storeAs(
-                'public/carImage', $fileName
+                'carImage', $fileName
             );
         }else{
             $fileName = $vehicle->carImage ;
