@@ -47,7 +47,7 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-outline form-white mb-4">
-                                                                <label class="form-label" for="receipt_field">Transaction Receipt</label>
+                                                                <label class="form-label" for="receipt_field">Transfer to BCA - 6048365823</label>
                                                                 <input type="file" name="proofImage" id="proofImage" class="form-control form px-5-control-lg">
                                                             </div>
                                                         </div>

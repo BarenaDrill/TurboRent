@@ -178,9 +178,11 @@
             <div class="d-flex gap-4" style="justify-content: center; margin-top:20px;">
 
                  <!-- Button trigger modal -->
+                 @auth
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Book Now</b>
                     </button>
+                 @endauth
                     {{-- <button type="button" class="btn" href="/wishlist" style="text-align: center; background-color:#c2ded1; color:#354259">
                         <b>Add to wishlist</b>
                     </button> --}}
