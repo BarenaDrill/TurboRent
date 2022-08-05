@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    Orders
+@endsection
+
 @section('container')
     <div class="d-flex justify-content-center gap-5 mt-3">
         <div>
@@ -25,6 +29,7 @@
                                 <img src="{{ asset('storage/carImage/' . $car->carImage) }}" style="height: 95px;" alt="...">
                                 <div class="m-3">
                                     <h5 class="card-title fs-4" style="color: #354259;"><strong>{{ $car->carName }}</strong></h5>
+                                    Total: {{ $book->total }}
                                 </div>
                             </div>
                         @endif

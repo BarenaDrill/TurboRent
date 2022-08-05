@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    Detail {{ $car->carName }}
+@endsection
+
 @section('container')
     <div class="d-flex">
         <div class="body0" style="display:flex; flex-direction:row ">

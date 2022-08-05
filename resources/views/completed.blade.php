@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    Orders
+@endsection
+
 @section('container')
     <div class="d-flex justify-content-center gap-5 mt-3">
         <div>

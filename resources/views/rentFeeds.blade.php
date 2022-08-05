@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    Car Detail
+@endsection
+
 @section('container')
     {{-- <div class="row mt-4 justify-content-center">
         <div class="col-md-12">
