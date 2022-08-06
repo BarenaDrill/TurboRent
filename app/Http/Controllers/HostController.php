@@ -12,7 +12,9 @@ class HostController extends Controller
 {
     public function index(){
         return view('dashboard.index',[
-            'vehicles' => Car::all()->sortByDesc('status')
+            'vehicles' => Car::all()
+            ->where('userID', auth()->user()->id)
+            ->sortByDesc('status')
         ]);
 
     }
@@ -53,7 +55,7 @@ class HostController extends Controller
             'plateNumber' => $request->plateNumber,
             'price' => $request->price,
             'carImage' => $fileName,
-            'userID' => 1,
+            'userID' => auth()->user()->id,
             'carAddress' => $request->carAddress,
             'status' => $request->status,
             'totalRating' => $request->totalRating,
